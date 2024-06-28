@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FoodFrenzy / Home Page</title>
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	
+    <link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/css/pages/unregister/home/home_page.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/css/common/register and unregister/home/home_food.css">
+</head>
+<body>
+	<div class="fullScreen">
+	
+		<div class="f_st_part"> 
+			<?php
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/html/same/unregister user/navigation/navigation_bar.html';
+			?>
+			<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/photos/system/food_table.jpg" alt="img" id="wallpaper"> 
+			<p class="greeting">Welcome<br/> to<br/> FoodFrenzy</p>
+			<div id="order_button_middle">ORDER</div>
+			
+			<div class="dropdown" id="drop_part">
+				<p id="drop_product">PRODUCTS</p>
+				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/svg/system/mini white dropdown.svg" id="dropdown" alt="drop">
+			</div>
+			
+		</div>
+		
+		<div class="s_nd_part" id="s_nd_part">
+			<div class="close">
+				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/svg/system/mini white dropdown.svg" id="close" alt="close">
+				<p id="close_product">PRODUCTS</p>
+			</div>
+			
+			<p id = "content"></p>
+			
+			<div id="foodList" class="food-list">
+				<!-- Food details will be dynamically added here -->
+			</div>
+			<button class= "show_more_foods" id="show_more_foods">Show more...&gt;</button>
+		</div>
+	
+		<div class="t_rd_part" id="t_rd_part">
+			<p id="about_title">ABOUT US</p>
+			<div class="about_con">
+				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/photos/system/canteen.png" alt="canteen" id="canteen_phto">
+				<p id="about_content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Food Frenzy is your one-stop online portal for ordering delicious and convenient canteen meals! We are passionate about providing a hassle-free way to enjoy a variety of food options at the comfort of your desk.
+									<br/><br/>
+									<span style="font-size: 24px; font-weight: bold;">Our Mission</span>
+									<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our mission is to revolutionize the canteen food experience by offering:
+									Convenience: Order your food anytime, anywhere through our user-friendly online system. Say goodbye to long lines and wasted lunch breaks!
+									Variety: We offer a wide selection of dishes to cater to all ......................
+				</p>
+				<button id="read_more_button">Read More...&nbsp;&gt;</button>
+			</div>
+		</div>
+		
+		<div class="f_th_part">
+			<?php
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/html/same/unregister user/site map/site_map.html';
+			?>
+		</div>
+		
+		<div class="fi_th_part"> 
+			<?php
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/html/same/register and unregister user/copyright/copyright.html';
+			?>
+		</div>
+	</div>
+	
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/javascript/pages/unregister user/home/home_page.js"></script>
+</body>
+</html>

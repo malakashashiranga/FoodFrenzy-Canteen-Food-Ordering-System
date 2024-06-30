@@ -6,30 +6,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	
-    <link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/css/pages/unregister/home/home_page.css">
-	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/css/common/register and unregister/home/home_food.css">
+    <link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/unregister/home/home_page.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/register and unregister/home/home_food.css">
 </head>
 <body>
 	<div class="fullScreen">
 	
 		<div class="f_st_part"> 
 			<?php
-				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/html/same/unregister user/navigation/navigation_bar.html';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/unregister user/navigation/navigation_bar.html';
 			?>
-			<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/photos/system/food_table.jpg" alt="img" id="wallpaper"> 
+			<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/food_table.jpg" alt="img" id="wallpaper"> 
 			<p class="greeting">Welcome<br/> to<br/> FoodFrenzy</p>
 			<div id="order_button_middle">ORDER</div>
 			
 			<div class="dropdown" id="drop_part">
 				<p id="drop_product">PRODUCTS</p>
-				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/svg/system/mini white dropdown.svg" id="dropdown" alt="drop">
+				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/mini white dropdown.svg" id="dropdown" alt="drop">
 			</div>
 			
 		</div>
 		
 		<div class="s_nd_part" id="s_nd_part">
 			<div class="close">
-				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/svg/system/mini white dropdown.svg" id="close" alt="close">
+				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/mini white dropdown.svg" id="close" alt="close">
 				<p id="close_product">PRODUCTS</p>
 			</div>
 			
@@ -59,17 +59,17 @@
 		
 		<div class="f_th_part">
 			<?php
-				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/html/same/unregister user/site map/site_map.html';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/unregister user/site map/site_map.html';
 			?>
 		</div>
 		
 		<div class="fi_th_part"> 
 			<?php
-				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/html/same/register and unregister user/copyright/copyright.html';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register and unregister user/copyright/copyright.html';
 			?>
 		</div>
 	</div>
 	
-	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/application/frontend/javascript/pages/unregister user/home/home_page.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/unregister user/home/home_page.js"></script>
 </body>
 </html>

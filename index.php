@@ -44,7 +44,7 @@
 		<div class="t_rd_part" id="t_rd_part">
 			<p id="about_title">ABOUT US</p>
 			<div class="about_con">
-				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/FoodFrenzy/storage/photos/system/canteen.png" alt="canteen" id="canteen_phto">
+				<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/canteen.png" alt="canteen" id="canteen_phto">
 				<p id="about_content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Food Frenzy is your one-stop online portal for ordering delicious and convenient canteen meals! We are passionate about providing a hassle-free way to enjoy a variety of food options at the comfort of your desk.
 									<br/><br/>
 									<span style="font-size: 24px; font-weight: bold;">Our Mission</span>

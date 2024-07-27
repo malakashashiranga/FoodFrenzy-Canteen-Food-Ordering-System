@@ -41,7 +41,7 @@
 		
 	</div>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/unregister user/food/food_page.js"></script>	
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/unregister user/food/food_page.js"></script>	
 
 </body>
 </html>

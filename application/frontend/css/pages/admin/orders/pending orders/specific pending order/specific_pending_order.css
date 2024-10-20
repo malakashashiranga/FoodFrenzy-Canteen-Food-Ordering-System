@@ -1,0 +1,45 @@
+#specific_order_form {
+	width: 640px;
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+.image_part {
+    transform: translate(260px, 0%);
+}
+
+#col1 {
+	margin-left: 100px;
+}
+#col2 {
+	margin-left: 111px;
+}
+#col3 {
+	margin-left: 70px;
+}
+#col4 {
+	margin-left: 125px;
+}
+#col5 {
+	margin-left: 50px;
+}
+#col6 {
+	margin-left: 70px;
+}
+#col7 {
+	margin-left: 70px;
+}
+
+#col8 {
+	margin-left: 90px;
+}
+
+#col9 {
+	margin-left: 105px;
+}
+
+#order_foods {
+	height: 150px;
+	resize: none;
+}

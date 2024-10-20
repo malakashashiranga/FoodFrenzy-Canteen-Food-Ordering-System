@@ -1,0 +1,67 @@
+#food_form {
+	width: 714px;
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+#food_details {
+	height: 120px;
+	resize: none;
+	padding-top: 10px;
+	transform: translate(0%, 10px);
+}
+
+#col1 {
+	margin-left: 152px;
+}
+#col2 {
+	margin-left: 162px;
+}
+#col3 {
+	margin-left: 62px;
+}
+#col4 {
+	margin-left: 28px;
+}
+#col5 {
+	margin-left: 194px;
+}
+#col6 {
+	margin-left: 177px;
+}
+#col7 {
+	margin-left: 155px;
+}
+
+#submit_button {
+	position: absolute;
+	right: 0px;
+}
+
+.bottom_alert_para {
+  color: #002696;
+  font-size: 16px;
+  transform: translate(260px, 5px);
+  width: 600px;
+}
+
+#cancel_button {
+	display: none;
+}
+
+#submit_button {
+	display: none;
+	bottom: 40px;
+}
+
+#image_upload_segment {
+	display: none;
+}
+
+#delete_button {
+	font-size: 18px;
+	position: absolute;
+	top: 30px;
+	right: 0px;
+}

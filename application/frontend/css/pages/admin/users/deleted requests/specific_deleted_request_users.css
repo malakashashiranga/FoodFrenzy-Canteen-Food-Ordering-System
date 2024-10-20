@@ -1,0 +1,44 @@
+#specific_user_details_form {
+	width: 690px;
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+.image_part {
+    transform: translate(285px, 0%);
+}
+
+#col1 {
+	margin-left: 162px;
+}
+#col2 {
+	margin-left: 140px;
+}
+#col3 {
+	margin-left: 178px;
+}
+#col4 {
+	margin-left: 110px;
+}
+#col5 {
+	margin-left: 109px;
+}
+#col6 {
+	margin-left: 40px;
+}
+#col7 {
+	margin-left: 49px;
+}
+#col8 {
+	margin-left: 42px;
+}
+#col9 {
+	margin-left: 109px;
+}
+
+#delete_button {
+	position : absolute; 
+	right: 0px;
+}
+

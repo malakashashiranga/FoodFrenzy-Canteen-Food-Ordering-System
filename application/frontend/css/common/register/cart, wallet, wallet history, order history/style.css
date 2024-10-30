@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+	overflow: hidden;
+}
+
+.menu {
+	top: 8%;
+}
+
+#wallpaper {
+	width: 100%;
+	height: 102vh;
+}
+
+.middle_part {
+	height: 570px;
+	width: 1300px;
+	background: rgba(226, 226, 226, 0.95);
+	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	left: 50%; 
+	top: 140px;
+	transform: translate(-50%, 0%);
+	z-index: 0;
+}
+
+.cart_title {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 15px;
+}
+
+#first_title {
+	text-decoration: underline;
+	
+}
+
+#second_title {
+	color: #F99400;
+}
+
+.blue_letters {
+	color: #0008f0;
+	cursor: pointer;
+	font-size: 18px;
+	margin: 0 0;
+}
+
+.blue_letters:active {
+	text-decoration: underline; 
+}
+
+.content {
+    background: rgba(125, 125, 125, 0.15);
+    width: 1250px;
+    padding: 30px 0px 30px 0px;
+	height: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    overflow-y: auto;  /* Apply the overflow to the container */
+}
+
+.userDetailsTable {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+	transform: translate(40px, 0);
+}
+
+.userDetailsTable thead {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.userDetailsTable td {
+    font-size: 18px;
+    padding: 10px 80px;
+    background-color: #C2C2C2;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.userDetailsTable tr td {
+	box-shadow: 2px 4px 2px rgba(84, 84, 84, 0.3);
+}
+
+.userDetailsTable tr:hover td {
+    background-color: #B2B2B2; 
+    transform: translateY(-2px); 
+}
+
+.userDetailsTable th, .userDetailsTable td {
+	text-align: center;
+	border-spacing: 0;
+}
+
+#noItemAlert {
+	display: none;
+	position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 40%;
+	font-weight: bold;
+	font-size: 32px;
+}

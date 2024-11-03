@@ -1,0 +1,16 @@
+#menu_wallet {
+	border-color: #F27622;
+	color: #F27622;
+}
+
+#walletHistoryTable {
+	position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+#current_wallet {
+	top: 20px;
+	left: 30px;
+	position: absolute;
+}

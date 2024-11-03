@@ -1,0 +1,152 @@
+.blue_letters {
+	bottom: 30px;
+	left: 30px;
+	position: absolute;
+}
+
+button {
+	font-size: 16px;
+	outline: none;
+	border: none;
+}
+
+.decrease-items, .increase-items {
+	width: 20px;
+	height: 20px;
+	transform: translate(0px, 2.5px);
+}
+
+.control-count-item-bg {
+	background-color: #dbdbdb;
+	padding: 5px;
+}
+
+.control-count-item-bg:hover {
+	background-color: #cbcbcb;
+}
+
+.control-count-item-bg:active {
+	background-color: #dbdbdb;
+}
+
+
+.remove-item {
+    background-color: #f70202;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.remove-item:hover {
+    background-color: #e00202; 
+}
+
+.remove-item:active {
+    background-color: #f70202; 
+}
+
+.cart-food-image {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+}
+
+.item-cart-quantity {
+	padding: 5px 10px;
+	background-color: #ffffff;
+}
+
+.checkOutField {
+	text-align: center;
+	display: none;
+}
+
+#totalPrice {
+	margin: 15px 0 10px 0;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.checkOut {
+	background-color: transparent;
+	color: #0008f0;
+	font-size: 18px;
+	border: 1px solid #0008f0; 
+	border-radius: 7px;
+    padding: 5px 15px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+	cursor: pointer;
+}
+
+.checkOut:hover {
+    background-color: rgb(0, 8, 240);
+    color: #ffffff; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.checkOut:active {
+    background-color: rgb(0, 8, 240); 
+    box-shadow: 2px 2px 10px rgba(1, 2, 0, 0.8); 
+}
+
+.checkOutFieldAlert {
+	position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+	background-color: #dedede;
+    padding: 20px 40px 60px 40px;
+    border-radius: 10px; 
+    box-shadow: 1px 1px 5px 2px #8a8a8a;
+	display: none;
+}
+
+#checkOutFieldAlertTitle {
+	font-size: 24px;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+
+.payTypelabel {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.payTypeRadio {
+	margin: 20px 10px 0 0;
+}
+
+#food_alert_cross {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	transition: transform 0.3s ease-in-out;
+}
+
+#food_alert_cross:hover {
+	transform: scale(1.1);
+}
+
+#food_alert_cross:active {
+	transform: scale(0.9);
+}
+
+#payButton {
+	position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+	margin-top: 12px;
+}
+
+.disable-interaction {
+    pointer-events: none;
+}
+
+#menu_cart {
+	border-color: #F27622;
+	color: #F27622;
+}

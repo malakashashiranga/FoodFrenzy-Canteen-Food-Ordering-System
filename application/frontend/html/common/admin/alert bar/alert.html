@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+	
+		.alert_box {
+			background-color: #dedede;
+			position: absolute;
+			top: 50%; 
+			left: calc(50% + 145px); 
+			transform: translate(-50%, -50%);
+			padding: 25px 40px 25px 40px;
+			border-radius: 10px; 
+			box-shadow: 1px 1px 5px 2px #8a8a8a;
+			display: none;
+			
+		}
+
+		.alert_para {
+			margin: 0 0;
+			color: #304478;
+			font-size: 18px;
+			font-family: Arial;
+			text-align: center;
+		}
+
+		#alert_cross {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		#alert_cross:hover {
+			transform: scale(1.1);
+		}
+
+		#alert_cross:active {
+			transform: scale(0.9);
+		}
+
+		.disable-interaction {
+			pointer-events: none;
+		}
+
+		.alert_button {
+			padding: 8px 16px;
+			outline: none;
+			border: none;
+			border-radius: 7px;
+			font-size: 16px;
+			color: #ffffff;
+			margin: 15px 0px 0px 0px;
+		}
+
+		#alert_first_btn {
+			background-color: rgba(255, 57, 13, 0.9);
+			
+		}
+
+		#alert_first_btn:hover {
+			background-color: rgba(255, 57, 13, 0.95);
+		}
+
+		#alert_first_btn:active {
+			background-color: rgba(255, 57, 13, 0.8);
+		}
+
+		#alert_second_btn {
+			background-color: rgba(16, 36, 88, 0.7);
+		}
+
+		#alert_second_btn:hover {
+			background-color: rgba(16, 36, 88, 0.75); 
+		}
+
+		#alert_second_btn:active {
+			background-color: rgba(16, 36, 88, 0.6);
+		}
+
+		#alert_cross {
+			width: 25px;
+			height: 25px;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		#alert_cross:hover {
+			transform: scale(1.1);
+		}
+
+		#alert_cross:active {
+			transform: scale(0.9);
+		}
+
+		#customAlertBox {
+			padding: 35px 45px 35px 45px;
+		}
+
+	</style>
+</head>
+<body>
+    
+	<div class="alert_box" id="alertBox" data-show-alert="false">
+		<p class="alert_para" id="first_para"></p>
+		<button id="alert_first_btn" class="alert_button"></button>
+		<button id="alert_second_btn" class="alert_button"></button>
+	</div>
+
+	<div class="alert_box" id="customAlertBox" data-show-custom-alert="false">
+		<img src="/FoodFrenzy/storage/svg/system/cross.svg" id="alert_cross">
+		<p class="alert_para" id="customAlertPara"></p>
+	</div>
+
+	<script>
+	
+		const fullScreen = document.querySelector(".full_screen");
+		const alertBox = document.getElementById("alertBox");
+		const alertCancel = document.getElementById("alert_first_btn");
+		const alertSubmit = document.getElementById("alert_second_btn");
+		const alertPara = document.getElementById("first_para"); // Add this line to get the alert paragraph element
+
+		function showAlertBox(alertMessage, firstButtonLabel, secondButtonLabel, ButtonsRight, MarginLeft) {
+			scrollToTopSmoothly();
+			document.body.style.overflow = "hidden";
+			fullScreen.classList.add("disable-interaction");
+			alertCancel.textContent = firstButtonLabel;
+			alertSubmit.textContent = secondButtonLabel;
+			alertCancel.style.marginLeft = MarginLeft;
+			alertCancel.style.marginRight = ButtonsRight;
+			alertPara.textContent = alertMessage;
+			alertBox.style.display = "block";
+		}
+
+
+		function hideAlertBox() {
+			document.body.style.overflow = "auto";
+			fullScreen.classList.remove("disable-interaction");
+			alertBox.style.display = "none";
+			alertCancel.textContent = "";
+			alertSubmit.textContent = "";
+			alertPara.textContent = ""; 
+		}
+
+		// Close alert box when cross icon is clicked
+		alertCancel.addEventListener("click", hideAlertBox);
+
+		// Retrieve the value from the data attribute and convert it to a boolean
+		const showAlertContent = alertBox.getAttribute("data-show-alert") === "true";
+
+		// Show the alert box if showAlertContent is true and pass the alert message
+		if (showAlertContent) {
+			showAlertBox(alertPara.textContent);
+		}
+
+
+		const customAlertBox = document.getElementById("customAlertBox");
+		const customAlertCross = document.getElementById("alert_cross");
+		const customAlertPara = document.getElementById("customAlertPara"); 
+
+
+		function showCustomAlertBox(alertMessage) {
+			scrollToTopSmoothly();
+			document.body.style.overflow = "hidden";
+			fullScreen.classList.add("disable-interaction");
+			customAlertBox.style.display = "block";
+			customAlertPara.textContent = alertMessage;
+		}
+
+
+		function hideCustomAlertBox() {
+			fullScreen.classList.remove("disable-interaction");
+			document.body.style.overflow = "auto";
+			customAlertBox.style.display = "none";
+			customAlertPara.textContent = ""; 
+		}
+		
+		customAlertCross.addEventListener("click", hideCustomAlertBox);
+
+		const showCustomAlertContent = customAlertBox.getAttribute("data-show-custom-alert") === "true";
+
+		if (showCustomAlertContent) {
+			showCustomAlertBox(customAlertPara.textContent);
+		}
+		
+		
+		function showPreventCustomAlertBox(alertMessage) {
+			scrollToTopSmoothly();
+			fullScreen.classList.add("disable-interaction");
+			customAlertBox.style.display = "block";
+			customAlertPara.textContent = alertMessage;
+		}
+
+
+		function hidePreventCustomAlertBox() {
+			fullScreen.classList.remove("disable-interaction");
+			document.body.style.overflow = "hidden";
+			customAlertBox.style.display = "none";
+			customAlertPara.textContent = ""; 
+		}
+
+		customAlertCross.addEventListener("click", hidePreventCustomAlertBox);
+
+		const showPreventCustomAlertContent = customAlertBox.getAttribute("data-show-custom-alert") === "true";
+
+		if (showPreventCustomAlertContent) {
+			showPreventCustomAlertBox(customAlertPara.textContent);
+		}
+
+
+		function scrollToTopSmoothly() {
+			const scrollDuration = 100; // Duration of the scroll animation in milliseconds
+			const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+			function scroll() {
+				if (window.scrollY !== 0) {
+					window.scrollBy(0, scrollStep);
+					requestAnimationFrame(scroll);
+				}
+			}
+
+			requestAnimationFrame(scroll);
+		}
+
+		var alertMessage = "<?php echo isset($alertMessage) ? $alertMessage : ''; ?>";
+		var alertContainer = document.getElementById("customAlertPara");
+
+		if (alertMessage) {
+			showCustomAlertBox(alertMessage);
+		} else {
+			alertContainer.style.display = "";
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.blue_letters {
+	text-align: center;
+}
+
+table {
+	background: #B3B3B3;
+	position: absolute;
+	left: 400px;
+	top: 100px;
+	width: 500px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+
+th, td {
+    text-align: center; 
+    vertical-align: middle;
+	padding: 20px;
+	cursor: default;
+}
+
+th {
+	font-size: 24px;
+}
+
+td {
+	font-size: 22px;
+}
+
+.blue_letters {
+	position: absolute;
+	left: 50%; 
+	top: 280px;
+	transform: translate(-50%, -50%);
+}
+
+.head_title {
+	font-size: 22px;
+}
+
+#menu_wallet {
+	border-color: #F27622;
+	color: #F27622;
+}

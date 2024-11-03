@@ -1,0 +1,3 @@
+normalizeTitles();
+selectTitle(homeTitle);
+hideAllSublists();

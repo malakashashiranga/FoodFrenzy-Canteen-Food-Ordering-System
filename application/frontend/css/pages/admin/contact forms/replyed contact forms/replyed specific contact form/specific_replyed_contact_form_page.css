@@ -1,0 +1,59 @@
+#repl_contact_form {
+	width: 800px;
+	position: absolute;
+	left: 50%; 
+	top: 15%;
+    transform: translate(-50%, 0%);
+}
+
+#col1 {
+	margin-left: 184px;
+}
+#col2 {
+	margin-left: 112px;
+}
+#col3 {
+	margin-left: 195px;
+}
+#col4 {
+	margin-left: 132px;
+}
+#col5 {
+	margin-left: 177px;
+}
+#col6 {
+	margin-left: 50px;
+}
+#col7 {
+	margin-left: 127px;
+}
+#col8 {
+	margin-left: 58px;
+}
+
+#message, #reply {
+	height: 200px;
+	resize: none;
+	padding-top: 10px;
+}
+
+.bottom_alert_para {
+  color: #002696;
+  font-size: 16px;
+  transform: translate(200px, 5px);
+}
+
+#subjectAlert {
+	width: 480px;
+	color: #000000;
+}
+
+#replyAlert {
+	font-size: 18px;
+}
+
+#submit_button {
+	position: absolute;
+	right: 0px;
+}
+

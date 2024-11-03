@@ -1,0 +1,66 @@
+.settings_parts {
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.4);
+	width: 800px;
+	border-radius: 10px;
+	transition: transform 0.3s, box-shadow 0.3s;
+	margin-bottom: 50px;
+}
+
+#whole_settings_parts {
+	width: 800px;
+	position: absolute;
+	top: 50px;
+	left: 50%; 
+	transform: translate(-50%, 0%);
+}
+
+.one_part_title {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.form_labels {
+	margin-left: 20px;
+}
+
+.fill_bars {
+	margin-left: 60px;
+}
+
+.buttons {
+	margin-left: 20px;
+}
+
+#email {
+	margin-left: 20px;
+}
+
+#showPassword {
+	margin-left: 60px;
+}
+
+.ques {
+	font-size: 20px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+}
+
+#update_instruct {
+	font-family: 'Helvetica', Arial, sans-serif;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.update_seg {
+	display: none;
+}
+
+.bottom_alert_para {
+  color: #002696;
+  font-size: 16px;
+  margin-left: 60px;
+}

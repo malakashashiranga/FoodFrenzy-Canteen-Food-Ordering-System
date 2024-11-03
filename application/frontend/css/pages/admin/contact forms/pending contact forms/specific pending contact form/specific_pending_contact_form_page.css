@@ -1,0 +1,56 @@
+#pend_contact_form {
+	width: 660px;
+	position: absolute;
+	left: 50%; 
+	top: 15%;
+    transform: translate(-50%, 0%);
+}
+
+#col1 {
+	margin-left: 123px;
+}
+#col2 {
+	margin-left: 50px;
+}
+#col3 {
+	margin-left: 136px;
+}
+#col4 {
+	margin-left: 73px;
+}
+#col5 {
+	margin-left: 120px;
+}
+#col6 {
+	margin-left: 74px;
+}
+#col7 {
+	margin-left: 73px;
+}
+
+#message, #reply {
+	height: 280px;
+	resize: none;
+	padding-top: 10px;
+}
+
+.bottom_alert_para {
+  color: #002696;
+  font-size: 16px;
+  transform: translate(200px, 5px);
+}
+
+#subjectAlert {
+	width: 480px;
+	color: #000000;
+}
+
+#replyAlert {
+	font-size: 18px;
+}
+
+#submit_button {
+	position: absolute;
+	right: 0px;
+}
+

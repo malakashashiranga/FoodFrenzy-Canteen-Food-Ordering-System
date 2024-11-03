@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+		body {
+			margin: 0px 0px;
+			width: 100%;
+			height: 320px;	
+		}
+
+		.sitemap{
+			list-style-type: none;
+			display: flex;
+			margin-top: 30px;
+			padding:0px;
+			cursor: default;
+		}
+
+		.rectangle {
+			width: 100%;
+			height: 320px;
+			background: linear-gradient(90deg, rgba(18,98,157,0.7) 0%, rgba(231,102,29,0.7) 0%, rgba(140,131,54,0.7) 100%);
+		}
+
+		.footer_list {
+			display: flex;
+			justify-content: center;
+		}
+
+		.title {
+			display: flex;
+			margin-bottom:30px;
+			font-weight: bold;
+			list-style-type:none;
+			font-family: 'Asul';
+			font-size: 25px;
+			text-decoration: underline;
+			margin-right:100px;
+			margin-left:100px;
+		}
+
+		.items {
+			list-style-type: none;
+			font-family: 'Asul';
+			font-size: 20px;
+			padding: 0px;
+			margin-right:100px;
+			margin-left:100px;
+			cursor: pointer;
+		}
+
+		.items li:active {
+			color: #454545;
+		}
+
+		.items li {
+			margin-bottom:10px;
+		  
+		}
+
+		#bottom_logo{
+			width:130px;
+			height: 130px;
+			margin-top:50%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="rectangle">
+		<div class="footer_list">
+			<ul class="sitemap">
+			
+			  <li>
+				<div class="title">Menu</div>
+				<ul class="items">
+				  <li id = "site_map_home">Home</li>
+				  <li id = "site_map_products">Products</li>
+				  <li id = "site_map_cart">Cart</li>
+				  <li id = "site_map_wallet">Wallet</li>
+				  <li id = "site_map_profile">Profile</li>
+				</ul>
+			  </li>
+			  
+			  <li>
+				<div class="title">Policy</div>
+				<ul class="items">
+					<li id = "site_map_helps">Helps & Supports</li>
+				  <li id = "site_map_terms">Terms & Conditions</li>
+				  <li id = "site_map_privacy">Privacy policy</li>
+				</ul>
+			  </li>
+			  
+			  <li>
+				<div class="title">Contacts</div>
+				<ul class="items">
+				  <li name="telephone" id = "site_map_tp_no">0112-653-598</li>
+				  <li name="e-mail"  id = "site_map_email">foodfrenzy0001@gmail.com</li>
+				</ul>
+			  </li>
+			  
+			  <li>
+				<div class="title"><img src="/FoodFrenzy/storage/photos/system/logo.png" id="bottom_logo" alt = "logo"></div>
+			  </li>
+			  
+			</ul>
+		</div>
+	</div>
+	
+	<script>
+		var siteMapHome = document.getElementById("site_map_home");
+		var siteMapProducts = document.getElementById("site_map_products");
+		var siteMapCart = document.getElementById("site_map_cart");
+		var siteMapWallet = document.getElementById("site_map_wallet");
+		var siteMapProfile = document.getElementById("site_map_profile");
+
+		var siteMapTp = document.getElementById("site_map_tp_no");
+		var siteMapEmail = document.getElementById("site_map_email");
+
+
+		siteMapHome.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/home/home_page.php";
+		});
+		siteMapProducts.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/foods/food_page.php";
+		});
+		siteMapCart.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/cart/cart.php";
+		});
+		siteMapWallet.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/wallet/wallet.php";
+		});
+		siteMapProfile.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php";
+		});
+
+
+		siteMapTp.addEventListener("click", function () {
+			window.location.href = "tel:0112-653-598";
+		});
+		siteMapEmail.addEventListener("click", function () {
+			window.location.href = "mailto:foodfrenzy0001@gmail.com";
+		});
+
+
+		document.getElementById("site_map_helps").addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/helps & supports/helps_&_supports.php";
+		});
+
+		document.getElementById("site_map_terms").addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/terms & conditions/terms_&_conditions.php";
+		});
+
+		document.getElementById("site_map_privacy").addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/privacy policy/privacy_policy.php";
+		});
+	</script>
+
+</body>
+</html>

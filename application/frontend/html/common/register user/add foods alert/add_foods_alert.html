@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+	
+        .cart_add_food_alert_cont {
+            position: fixed; /* Use fixed position */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 10px 20px 10px 20px;
+            z-index: 1;
+            display: none;
+            border-radius: 10px;
+            opacity: 1; 
+            transition: opacity 0.5s ease-in-out; 
+			background-color: rgba(222, 222, 222, 0.9);
+        }
+
+        #cart_add_food_alert {
+            font-size: 20px;
+			margin: 0 0;
+			color: #304478;
+			font-weight: bold;
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="cart_add_food_alert_cont" id="cartAlertCont">
+        <p id="cart_add_food_alert"></p>
+    </div>
+
+    <script>
+        function showCartAddAlertBox(cartAlertMessage) {
+			var cartAlertCont = document.getElementById('cartAlertCont');
+			var cartAddFoodAlert = document.getElementById('cart_add_food_alert');
+			
+			cartAddFoodAlert.textContent = cartAlertMessage;
+			cartAlertCont.style.opacity = '1'; 
+			cartAlertCont.style.display = 'block'; 
+
+			setTimeout(function() {
+				cartAlertCont.style.opacity = '0'; 
+				setTimeout(function() {
+					cartAlertCont.style.display = 'none'; 
+				}, 500); 
+			}, 1000); 
+		}
+    </script>
+	
+</body>
+</html>

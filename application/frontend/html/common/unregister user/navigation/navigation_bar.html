@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	
+		.header {
+			z-index: 1;
+			top: 8%;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		.nav_list {
+			color: #FFFFFF;
+			display: flex;
+				
+		}
+		
+		.nav_item {
+			font-family: 'Lusitana';
+			font-weight: 500;
+			border-radius: 15px;
+			border: 3.5px solid #C9C9C9;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+		}
+		
+		.nav_item:hover {
+			color: #C9C9C9;
+		}
+
+		.nav_item:active {
+			color: #a9a9a9;
+		}
+		
+		#ico1 {
+			width: 32px;
+			height: 32px;
+			border: 2.5px solid #ffffff;
+			border-radius: 15px;
+			padding: 3px;
+		}
+
+		#ico1:hover {
+			border-color: #C9C9C9;
+		}
+
+		#ico1:active {
+			border-color: #a9a9a9;
+		}
+	
+	
+		@media (min-width: 1200px) {
+
+			.logo {
+				width: 100px;
+				height: 100px;
+				margin-right: 110px;
+			}
+			
+			#logo {
+				width: 100px;
+				height: 100px;
+				justify-content: center;
+			}
+			
+			.nav_item {
+				font-size: 20px;
+				padding: 4px;
+				height: 22px;
+				width: 120px;
+				margin-right: 110px;
+			}
+			
+			#ico1 {
+				width: 30px;
+				height: 30px;
+				border: 2.5px solid #ffffff;
+			}
+			
+		}
+		
+		
+		@media (max-width: 1200px) {
+
+			.logo {
+				width: 80px;
+				height: 80px;
+				margin-right: 70px;
+			}
+			
+			#logo {
+				width: 80px;
+				height: 80px;
+				justify-content: center;
+			}
+
+			.nav_item {
+				font-size: 18px;
+				padding: 4px;
+				height: 20px;
+				width: 110px;
+				margin-right: 70px;
+			}
+			
+		}
+		
+		
+		@media (max-width: 960px) {
+
+			.logo {
+				width: 60px;
+				height: 60px;
+				margin-right: 40px;
+			}
+			
+			#logo {
+				width: 60px;
+				height: 60px;
+				justify-content: center;
+			}
+
+			.nav_item {
+				font-size: 16px;
+				padding: 3px;
+				height: 18px;
+				width: 100px;
+				margin-right: 40px;
+			}
+			
+			#ico1 {
+				width: 25px;
+				height: 25px;
+				border: 2px solid #ffffff;
+			}
+			
+		}
+		
+		
+		@media (max-width: 740px) {
+		
+			.header {
+				top: 12%;
+				position: absolute;
+				display: flex;
+				flex-direction: column; 
+				align-items: center;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.logo {
+				margin-right: 0px;
+				margin-bottom: 10px;
+			}
+			
+			.nav_item {
+				font-size: 16px;
+				padding: 3px;
+				width: 100px;
+				margin-right: 15px;
+				margin-left: 15px;
+			}
+			
+		}
+
+	</style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="/FoodFrenzy/storage/photos/system/logo.png" id="logo" alt="logo">
+        </div>
+        <div class="nav_list">
+            <div class="nav_item" id="menu_home">HOME</div>
+            <div class="nav_item" id="menu_products">PRODUCTS</div>
+            <div class="nav_item" id="menu_contacts">CONTACTS</div>
+            <div class="nav_item" id="menu_about">ABOUT US</div>
+        </div>
+            <div class="symbol_item" id = "login_symbol"><img src="/FoodFrenzy/storage/svg/system/person.svg" id="ico1" alt="log in"></div>
+    </div>
+	
+	<script>
+		var homeMenuItem = document.getElementById('menu_home');
+		var productsMenuItem = document.getElementById('menu_products');
+		var contactsMenuItem = document.getElementById('menu_contacts');
+		var aboutMenuItem = document.getElementById('menu_about');
+		var loginSymbolMenuItem = document.getElementById('login_symbol');
+
+		homeMenuItem.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/index.php";
+		});
+		
+		productsMenuItem.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/unregister user/food page/food_page.php";
+		});
+		
+		contactsMenuItem.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/unregister user/contact us/contacts.php";
+		});
+		
+		aboutMenuItem.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/unregister user/about us/about_us.php";
+		});
+		
+		loginSymbolMenuItem.addEventListener("click", function () {
+			window.open("/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php", '_blank');
+		});
+	</script>
+	
+</body>
+</html>

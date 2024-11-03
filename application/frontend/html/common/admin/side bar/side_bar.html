@@ -1,0 +1,463 @@
+<html>
+<head>
+	<style>
+	
+		body {
+			margin: 0px 0px;
+			height: 100vh;
+		}
+
+
+		.header{
+			position:relative;
+			display: flex;
+			width: 380px;
+			height: 100px;
+			background: linear-gradient(90deg, rgba(255,132,0,1) 0%, rgba(255,153,0,1) 50%, rgba(255,179,0,1) 100%);
+			border-radius: 0px 0px 90px 0px;
+			align-items: center; 
+		}
+
+		#small_logo{
+			height: 90px;
+			width: 90px;
+			margin-right: 25px;
+			margin-left: 15px;
+		}
+
+		.name{
+			font-family: Asul;
+			font-size: 40px;
+			font-weight: 700;
+		}
+
+		.bar{
+			position:relative;
+			width: 290px;
+			background: rgba(255,179,0,0.05);
+			position: absolute;
+			overflow-y: auto; /* Make the list scrollable */
+			height: calc(100vh - 100px); /* Adjust the height to fit the remaining space */
+		}
+
+		#list_img{
+			width: 35px;
+			height: 35px;
+			right: 0;
+			position: absolute;
+			margin-right: 20px;
+		}
+
+		.title{
+			position: relative;
+			font-family: Asul;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: bold;
+			height: 50px;
+			background: #f6f6f6;
+			display: flex;
+			align-items: center;
+			padding-left: 52.5px; 
+			cursor: default;
+			transition: background-color 0.1s ease;
+			color: #000;
+		}
+
+
+		.title:hover,
+		.title:hover .sub_list {
+		  margin-bottom: 2px;
+		  outline: 2px solid #fcc883;
+		}
+
+
+		.title:active {
+			background-color: #dfdfdf;
+			margin-bottom: 2px;
+		  outline: 2px solid #fc8f00;
+		}
+
+
+		.footer {
+			position: fixed;
+			bottom: 0;
+			width: 290px;
+		}
+		  
+		.rectangle {
+			width: 100%;
+			height: 36px;
+			background-color: #000000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		  
+		  
+		.words {
+			color: #fff;
+			font-family:'Asul';
+			font-size: 18px;
+		}
+
+		.sub_list{
+			color: #000;
+			font-family: Asul;
+			font-size: 20px;
+			font-style: normal;
+			background: #cfcfcf;
+			padding-left: 30.5px;
+			transition: background-color 0.1s ease;
+			cursor: default;
+			margin-left:52.5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.sub_list:hover,
+		.sub_list:hover .sub_list {
+		  margin-bottom: 1px;
+		  outline: 1px solid #fc6a6a;
+		}
+
+
+		.sub_list:active {
+			background-color: #b2b2b2;
+			margin-bottom: 1px;
+		  outline: 2px solid #ff0000;
+		}
+
+
+		.list{
+			position:relative;
+			margin-top: 50px;
+			margin-bottom: 80px;
+		}
+
+		.main_sub_list {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="/FoodFrenzy/storage/photos/system/logo.png" id="small_logo">
+		<div class="name">FoodFrenzy</div>
+	</div>
+	
+	<div class="bar">
+		<img src="/FoodFrenzy/storage/svg/system/list.svg" id="list_img">
+    
+		<div class="list">
+			<div class="title" id="home">
+				Home
+			</div>
+    
+			<div class="title" id="orders">
+				Orders
+			</div>
+			<div id="orders_list" class="main_sub_list">
+				<div class="sub_list" id="c_order">Pending Orders</div>
+				<div class="sub_list" id="f_orders">Finished Orders</div>
+				<div class="sub_list" id="d_orders">Discard Orders</div>
+			</div>
+    
+			<div class="title" id="menu">
+				Menu
+			</div>
+			<div id="menu_list" class="main_sub_list">
+				<div class="sub_list" id="a_n_foods">Add New Foods</div>
+				<div class="sub_list" id="m_f_details">Manage Foods Details</div>
+			</div>
+    
+			<div class="title" id="users">
+				Users
+			</div>
+			<div id="user_list" class="main_sub_list">
+				<div class="sub_list" id="u_details">Users Details</div>
+				<div class="sub_list" id="d_requests">Delete Requests</div>
+			</div>
+    
+			<div class="title" id="manage_wallets">
+				Manage wallets
+			</div>
+			<div id="wallet_list" class="main_sub_list">
+				<div class="sub_list" id="u_u_wallets">Update Users Wallets</div>
+				<div class="sub_list" id="u_w_history">User Wallets History</div>
+			</div>
+   	
+			<div class="title" id="contact_forms">
+				Contact forms
+			</div>
+			<div id="c_form_list" class="main_sub_list">
+				<div class="sub_list" id="new_contact_forms">Pending Forms</div>
+				<div class="sub_list" id="past_contact_forms">Replyed Forms</div>
+			</div>
+    
+			<div class="title" id="settings">
+				Settings
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class = "rectangle">
+				<div class = "words">
+					&copy; 2023 FoodFrenzy.All right reserved.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var mainTitle = document.getElementsByClassName("title");
+		var mainSublists = document.getElementsByClassName("main_sub_list");
+		var subLists = document.getElementsByClassName("sub_list");
+
+		var homeTitle = document.getElementById("home");
+
+		var ordersTitle = document.getElementById("orders");
+		var ordersList = document.getElementById("orders_list");
+		var currentOrder = document.getElementById("c_order");
+		var finishedOrders = document.getElementById("f_orders");
+		var discardOrders = document.getElementById("d_orders");
+
+		var menuTitle = document.getElementById("menu");
+		var menuList = document.getElementById("menu_list");
+		var addNewFoods = document.getElementById("a_n_foods");
+		var manageFoodsDetails = document.getElementById("m_f_details");
+
+		var usersTitle = document.getElementById("users");
+		var userList = document.getElementById("user_list");
+		var userDetails = document.getElementById("u_details");
+		var deleteRequests = document.getElementById("d_requests");
+
+		var manageWalletsTitle = document.getElementById("manage_wallets");
+		var walletList = document.getElementById("wallet_list");
+		var updateUserWallets = document.getElementById("u_u_wallets");
+		var userWalletsHistory = document.getElementById("u_w_history");
+
+		var contactFormsTitle = document.getElementById("contact_forms");
+		var contactFormList = document.getElementById("c_form_list");
+		var newContactForms = document.getElementById("new_contact_forms");
+		var pastContactForms = document.getElementById("past_contact_forms");
+
+		var settingsTitle = document.getElementById("settings");
+
+
+		homeTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/home/home.php";
+		});
+		
+		
+		ordersTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/orders/pending orders/order list/pending_orders.php";
+		});
+		currentOrder.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/orders/pending orders/order list/pending_orders.php";
+		});
+		finishedOrders.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/orders/finished orders/order list/finished_orders.php";
+		});
+		discardOrders.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/orders/discard orders/order list/discard_orders.php";
+		});
+
+
+		menuTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/menu/add new food/add_new_food_page.php";
+		});
+		addNewFoods.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/menu/add new food/add_new_food_page.php";
+		});
+		manageFoodsDetails.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php";
+		});
+
+
+		usersTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/users/user details/user list/users_details.php";
+		});
+		userDetails.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/users/user details/user list/users_details.php";
+		});
+		deleteRequests.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/users/deleted requests/user list/deleted_request_users.php";
+		});
+
+
+		manageWalletsTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/wallets/update wallets/wallet list/list_of_wallets.php";
+		});
+		updateUserWallets.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/wallets/update wallets/wallet list/list_of_wallets.php";
+		});
+		userWalletsHistory.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/wallets/wallets history/wallet list/list_of_wallet_history.php";
+		});
+
+
+		contactFormsTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php";
+		});
+		newContactForms.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php";
+		});
+		pastContactForms.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/contact forms/replyed contact forms/replyed contact forms/replyed_contact_forms.php";
+		});
+
+
+		settingsTitle.addEventListener("click", function () {
+			window.location.href = "/FoodFrenzy/application/frontend/php/pages/admin/settings/settings.php";
+		});
+
+
+
+		ordersTitle.addEventListener("click", function () {
+			normalizeTitles();
+			normalizeSubTitles();
+			selectTitle(ordersTitle);
+			hideAllSublists();
+			showSublist(ordersList);
+			selectsubLists(currentOrder);
+		});
+		currentOrder.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(currentOrder);
+		});
+		finishedOrders.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(finishedOrders);
+		});
+		discardOrders.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(discardOrders);	
+		});
+
+
+		usersTitle.addEventListener("click", function () {
+			normalizeTitles();
+			normalizeSubTitles();
+			selectTitle(usersTitle);
+			hideAllSublists();
+			showSublist(userList);
+			selectsubLists(userDetails);
+		});
+		userDetails.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(userDetails);
+		});
+		deleteRequests.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(deleteRequests);
+		});
+
+
+		manageWalletsTitle.addEventListener("click", function () {
+			normalizeTitles();
+			normalizeSubTitles();
+			selectTitle(manageWalletsTitle);
+			hideAllSublists();
+			showSublist(walletList);
+			selectsubLists(updateUserWallets);
+		});
+		updateUserWallets.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(updateUserWallets);
+		});
+		userWalletsHistory.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(userWalletsHistory);
+		});
+
+
+		contactFormsTitle.addEventListener("click", function () {
+			normalizeTitles();
+			normalizeSubTitles();
+			selectTitle(contactFormsTitle);
+			hideAllSublists();
+			showSublist(contactFormList);
+			selectsubLists(newContactForms);
+		});
+		newContactForms.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(newContactForms);
+		});
+		pastContactForms.addEventListener("click", function () {
+			normalizeSubTitles();
+			selectsubLists(pastContactForms);
+		});
+
+
+		settingsTitle.addEventListener("click", function () {
+			normalizeTitles();
+			selectTitle(settingsTitle);
+			hideAllSublists();
+		});
+
+
+
+		function showSublist(sublist) {
+			sublist.style.display = 'block';
+			sublist.style.opacity = '0';
+
+			var opacity = 0;
+			var timer = setInterval(function () {
+				if (opacity >= 1) {
+					clearInterval(timer);
+				}
+				sublist.style.opacity = opacity;
+				opacity += 0.1; 
+			}, 50); 
+		}
+
+
+		function hideAllSublists() {
+			for (var i = 0; i < mainSublists.length; i++) {
+				mainSublists[i].style.opacity = '0';
+				mainSublists[i].style.display = 'none';
+			}
+		}
+
+
+		function selectTitle(title) {
+			title.style.backgroundColor = "#dfdfdf";
+			title.style.borderColor = "#fc8f00";
+			title.style.borderWidth = "2px";
+			title.style.borderStyle = "solid";
+		}
+
+
+		function normalizeTitles() {
+			for (var i = 0; i < mainTitle.length; i++) {
+				mainTitle[i].style.backgroundColor = "#f6f6f6";
+				mainTitle[i].style.borderColor = "none";
+				mainTitle[i].style.borderWidth = "0px";
+				mainTitle[i].style.borderStyle = "none";
+			}
+		}
+
+
+		function selectsubLists(subTitle) {
+			subTitle.style.backgroundColor = "#b2b2b2";
+			subTitle.style.borderColor = "#ff0000";
+			subTitle.style.borderWidth = "2px";
+			subTitle.style.borderStyle = "solid";
+		}
+
+
+		function normalizeSubTitles() {
+			for (var i = 0; i < subLists.length; i++) {
+				subLists[i].style.backgroundColor = "#cfcfcf";
+				subLists[i].style.borderColor = "none";
+				subLists[i].style.borderWidth = "0px";
+				subLists[i].style.borderStyle = "none";
+			}
+		}
+
+	</script>
+
+</body>
+</html>

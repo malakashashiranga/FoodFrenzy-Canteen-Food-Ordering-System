@@ -29,6 +29,7 @@
 			<img src="/FoodFrenzy/storage/photos/system/food_table.jpg" alt="img" id="wallpaper"> 
 			<p class="greeting">Welcome<br/> to<br/> FoodFrenzy</p>
 			<div id="order_button_middle">ORDER</div>
+
 			
 			<div class="dropdown" id="drop_part">
 				<p id="drop_product">PRODUCTS</p>

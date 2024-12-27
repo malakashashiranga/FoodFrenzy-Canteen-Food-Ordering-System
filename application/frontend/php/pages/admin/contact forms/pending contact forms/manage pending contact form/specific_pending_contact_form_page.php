@@ -94,7 +94,7 @@
 	?>
 	
 <script src="/FoodFrenzy/application/frontend/javascript/pages/admin/contact forms/pending contact forms/manage specific contact form/specific_pending_contact_form_page.js"></script>
-<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/contact forms/pending contact forms/specific contact form/reply_specific_pending_contact_form_ajax.js"></script>
+<script src="/FoodFrenzy/application/AJAX/admin/contact forms/pending contact forms/specific contact form/reply_specific_pending_contact_form_ajax.js"></script>
 
 </body>
 </html>

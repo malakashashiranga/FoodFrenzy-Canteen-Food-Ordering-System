@@ -135,8 +135,8 @@
 	?>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/menu/manage food details/manage specific food/update food/update_food_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/menu/manage food details/manage specific food/delete food/delete_food_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/menu/manage food details/manage specific food/update food/update_food_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/menu/manage food details/manage specific food/delete food/delete_food_ajax.js"></script>
 
 </body>
 </html>

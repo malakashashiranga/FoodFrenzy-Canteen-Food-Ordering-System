@@ -102,9 +102,9 @@
 	?>
 	
 	<script src = "/FoodFrenzy/application/frontend/javascript/pages/register user/home/home_page.js"></script>
-	<script src = "/FoodFrenzy/application/frontend/javascript/ajax/register user/home page/load foods/load_foods_ajax.js"></script>
-	<script src = "/FoodFrenzy/application/frontend/javascript/ajax/register user/home page/foods add to cart/food_add_to_cart_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src = "/FoodFrenzy/application/AJAX/register user/home page/load foods/load_foods_ajax.js"></script>
+	<script src = "/FoodFrenzy/application/AJAX/register user/home page/foods add to cart/food_add_to_cart_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

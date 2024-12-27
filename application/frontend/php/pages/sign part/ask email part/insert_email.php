@@ -43,7 +43,7 @@
 
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/remove placeholder/placeholder.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/fill bars error check/fill_bar_error_checker.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/ask email/email_validation_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/ask email/email_validation_ajax.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/same/register and unregister user/prevent scroll bar/prevent_scroll_bar.js"></script>
 
 </body>

@@ -73,7 +73,7 @@
 	?>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/menu/manage food details/food list/manage_food_details.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/menu/manage food details/food list/load_food_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/menu/manage food details/food list/load_food_ajax.js"></script>
 
 </body>
 </html>

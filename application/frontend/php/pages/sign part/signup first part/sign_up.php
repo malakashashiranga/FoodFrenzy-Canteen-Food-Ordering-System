@@ -52,7 +52,7 @@
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/remove placeholder/placeholder.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/fill bars error check/fill_bar_error_checker.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/sign part/sign up/sign_up.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/sign up/form_validation_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/sign up/form_validation_ajax.js"></script>
 
 </body>
 </html>

@@ -87,7 +87,7 @@
 
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/unregister user/home/home_page.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/unregister user/home page/load_foods_ajax.js"></script>	
+	<script src="/FoodFrenzy/application/AJAX/unregister user/home page/load_foods_ajax.js"></script>	
 
 </body>
 </html>

@@ -67,8 +67,8 @@
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/remove placeholder/placeholder.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/fill bars error check/fill_bar_error_checker.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/sign part/sign in/sign_in.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/sign in/forget password/forget_password_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/sign in/valid credentials/valid_credentials_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/sign in/forget password/forget_password_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/sign in/valid credentials/valid_credentials_ajax.js"></script>
 
 </body>
 </html>

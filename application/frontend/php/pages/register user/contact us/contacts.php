@@ -33,8 +33,8 @@
 		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/contact us/form_submit_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/contact us/form_submit_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 	
 </body>
 </html>

@@ -59,9 +59,9 @@
 		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register user/add foods alert/add_foods_alert.html';
 	?>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/foods page/load foods/load_foods_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/foods page/foods add to cart/food_add_to_cart_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/foods page/load foods/load_foods_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/foods page/foods add to cart/food_add_to_cart_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

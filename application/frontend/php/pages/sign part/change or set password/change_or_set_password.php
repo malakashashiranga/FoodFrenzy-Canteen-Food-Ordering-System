@@ -67,7 +67,7 @@
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/remove placeholder/placeholder.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/show passwords/show_password.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/jump to next/jump.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/change or set password/password_validation_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/change or set password/password_validation_ajax.js"></script>
 
 </body>
 </html>

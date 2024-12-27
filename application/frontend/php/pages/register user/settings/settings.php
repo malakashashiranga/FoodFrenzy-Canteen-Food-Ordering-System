@@ -149,11 +149,11 @@
 	?>
 	  
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/register user/settings/settings.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/settings/show user details/show_user_details_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/settings/profile picture handle/pic_form_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/settings/button clicks/buttons_click_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/settings/logout and delete account/account_delete_&_logout_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/settings/show user details/show_user_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/settings/profile picture handle/pic_form_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/settings/button clicks/buttons_click_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/settings/logout and delete account/account_delete_&_logout_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

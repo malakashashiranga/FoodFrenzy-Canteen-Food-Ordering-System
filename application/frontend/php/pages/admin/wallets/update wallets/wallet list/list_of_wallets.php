@@ -60,7 +60,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/wallets/update wallets/wallet lists/list_of_wallet.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/wallets/update wallets/wallet list/load_wallet_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/wallets/update wallets/wallet list/load_wallet_details_ajax.js"></script>
 
 </body>
 </html>

@@ -50,7 +50,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/users/user details/user list/users_details.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/users/user details/user list/load_users_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/users/user details/user list/load_users_details_ajax.js"></script>
 
 </body>
 </html>

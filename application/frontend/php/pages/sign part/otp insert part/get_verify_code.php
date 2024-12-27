@@ -41,8 +41,8 @@
 	?>
 	
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/sign part/otp insert part/verify.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/otp insert part/otp validation/otp_validation_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/sign part/otp insert part/resend otp/resend_code_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/otp insert part/otp validation/otp_validation_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/sign part/otp insert part/resend otp/resend_code_ajax.js"></script>
 
 </body>
 </html>

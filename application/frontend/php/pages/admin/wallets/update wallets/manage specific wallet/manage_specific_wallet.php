@@ -92,7 +92,7 @@
 	?>
 	
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/wallets/update wallets/manage specific wallet/manage_specific_wallet.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/wallets/update wallets/manage specific wallet/update_wallet_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/wallets/update wallets/manage specific wallet/update_wallet_ajax.js"></script>
 
 </body>
 </html>

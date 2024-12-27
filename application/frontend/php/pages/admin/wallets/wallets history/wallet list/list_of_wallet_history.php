@@ -49,7 +49,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/wallets/wallets history/wallet list/list_of_wallet_history.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/wallets/wallets history/wallet list/load_wallet_history_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/wallets/wallets history/wallet list/load_wallet_history_details_ajax.js"></script>
 
 </body>
 </html>

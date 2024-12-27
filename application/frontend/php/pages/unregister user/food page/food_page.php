@@ -55,7 +55,7 @@
 		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register and unregister user/specific foods/show_specific_food.html';
 	?>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/unregister user/food page/load_foods_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/unregister user/food page/load_foods_ajax.js"></script>
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/unregister user/food/food_page.js"></script>	
 
 </body>

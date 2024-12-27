@@ -49,7 +49,7 @@
 	?>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/contact forms/pending contact forms/pending contact forms/load_pending_contact_forms_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/contact forms/pending contact forms/pending contact forms/load_pending_contact_forms_ajax.js"></script>
 
 </body>
 </html>

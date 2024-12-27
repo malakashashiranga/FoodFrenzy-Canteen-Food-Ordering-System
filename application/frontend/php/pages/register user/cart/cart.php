@@ -81,9 +81,9 @@
 	?>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/register user/cart/cart.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/cart page/handle cart/handle_cart_details_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/cart page/make payment/make_payment_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/cart page/handle cart/handle_cart_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/cart page/make payment/make_payment_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

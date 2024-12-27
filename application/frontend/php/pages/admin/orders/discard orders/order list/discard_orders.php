@@ -51,7 +51,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/orders/discard orders/order list/discard_orders.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/orders/discard orders/order list/load_discard_orders_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/orders/discard orders/order list/load_discard_orders_ajax.js"></script>
 
 </body>
 </html>

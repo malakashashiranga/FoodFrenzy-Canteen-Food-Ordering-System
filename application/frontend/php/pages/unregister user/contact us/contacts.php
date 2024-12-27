@@ -23,7 +23,7 @@
 		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/unregister user/contact us/form_submit_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/unregister user/contact us/form_submit_ajax.js"></script>
 	
 </body>
 </html>

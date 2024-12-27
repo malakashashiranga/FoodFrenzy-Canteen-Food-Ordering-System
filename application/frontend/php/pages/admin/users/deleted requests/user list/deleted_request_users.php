@@ -50,7 +50,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/users/deleted requests/user list/deleted_request_users.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/users/deleted requests/user list/load_deleted_request_users_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/users/deleted requests/user list/load_deleted_request_users_ajax.js"></script>
 
 </body>
 </html>

@@ -50,8 +50,8 @@
 	</div>
 	
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/register user/wallet history/wallet_history.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/wallet/wallet history/load_wallet_history_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/wallet/wallet history/load_wallet_history_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 		
 </body>
 </html>

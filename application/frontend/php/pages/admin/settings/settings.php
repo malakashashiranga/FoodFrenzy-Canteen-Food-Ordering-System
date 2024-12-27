@@ -140,9 +140,9 @@
 	?>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/settings/settings.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/settings/show admin profile details/show_admin_details_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/settings/button clicks/button_click_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/settings/log out/log_out_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/settings/show admin profile details/show_admin_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/settings/button clicks/button_click_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/settings/log out/log_out_ajax.js"></script>
 
 </body>
 </html>

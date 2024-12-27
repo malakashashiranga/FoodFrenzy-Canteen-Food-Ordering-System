@@ -43,7 +43,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/contact forms/replyed contact forms/replyed contact forms/replyed_contact_forms.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/contact forms/replyed contact forms/replyed contact forms/load_replyed_contact_forms_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/contact forms/replyed contact forms/replyed contact forms/load_replyed_contact_forms_ajax.js"></script>
 
 </body>
 </html>

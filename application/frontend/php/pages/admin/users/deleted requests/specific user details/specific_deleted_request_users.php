@@ -107,7 +107,7 @@
 	?>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/users/deleted requests/specific user details/specific_deleted_request_users.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/users/deleted requests/specific user details/delete_user_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/users/deleted requests/specific user details/delete_user_details_ajax.js"></script>
 	
 </body>
 </html>

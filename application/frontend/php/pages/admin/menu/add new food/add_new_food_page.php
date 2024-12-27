@@ -122,7 +122,7 @@
 	?>
 	
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/menu/add new food/add_new_food_page.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/menu/add new food/submit_food_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/menu/add new food/submit_food_ajax.js"></script>
 	
 </body>
 </html>

@@ -51,7 +51,7 @@
 	</div>
 
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/orders/finished orders/order list/finished_orders.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/orders/finished orders/food list/load_finished_orders_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/orders/finished orders/food list/load_finished_orders_ajax.js"></script>
 
 </body>
 </html>

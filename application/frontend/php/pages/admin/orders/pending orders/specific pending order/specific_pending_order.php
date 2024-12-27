@@ -120,7 +120,7 @@
 	?>
 	
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/orders/pending orders/specific pending order/specific_pending_order.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/admin/orders/pending orders/specific pending order/confirm_specific_order_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/admin/orders/pending orders/specific pending order/confirm_specific_order_ajax.js"></script>
 
 </body>
 </html>

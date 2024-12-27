@@ -42,8 +42,8 @@
 	</div>
 	
 	<script src="/FoodFrenzy/application/frontend/javascript/pages/register user/wallet/wallet.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/wallet/wallet details/show_wallet_details_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/ajax/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/wallet/wallet details/show_wallet_details_ajax.js"></script>
+	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

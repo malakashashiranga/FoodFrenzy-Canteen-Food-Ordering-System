@@ -3,7 +3,7 @@ session_set_cookie_params(0, '/', '', true, true);
 session_name('active_check');
 session_start();
 
-include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 
 if ($connection_status === "successfully") {
     $email = $_SESSION['e_mail'];
@@ -24,16 +24,16 @@ if ($connection_status === "successfully") {
 	
 	
 	$_SESSION['otp'] = $otp;
-	header ("Location: /FoodFrenzy/application/backend/php/sign part/send verify code/send_verify_code.php");	
+	header ("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/sign part/send verify code/send_verify_code.php");	
 	exit;
 } else {
 	if ($_SESSION['process'] === "sign up"){
-		$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php"; 
+		$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php"; 
 	} else{
-		$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php";
+		$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php";
 	}
 	$errorMessage = "Database connection failed: " . $connection_status;
-	$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
+	$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
 
 	header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 	exit;

@@ -11,7 +11,7 @@ $(document).ready(function() {
         isLoading = true;
 
         $.ajax({
-            url: '/FoodFrenzy/application/backend/php/admin/orders/pending orders/order list/load_pending_orders_to_page.php',
+            url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin/orders/pending orders/order list/load_pending_orders_to_page.php',
             type: "POST",
             dataType: "json",
             data: {searchTerm: searchTerm},
@@ -41,7 +41,7 @@ $(document).ready(function() {
 							orderRow.on("click", function() {
 								const orderID = order.orderID;
 								const encodedOrderID = encodeURIComponent(orderID);
-								window.location.href = `/FoodFrenzy/application/backend/php/admin/orders/pending orders/redirect to specific order/redirect_to_specific_pending_orders.php?orderID=${encodedOrderID}`;
+								window.location.href = `/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin/orders/pending orders/redirect to specific order/redirect_to_specific_pending_orders.php?orderID=${encodedOrderID}`;
 							});
 
 							tableBody.append(orderRow);
@@ -50,16 +50,16 @@ $(document).ready(function() {
 				} else {
 					if (data.error_page) {
 						const encodedAlert = encodeURIComponent(data.alert);
-						const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/orders/pending orders/order list/pending_orders.php"; 
-						const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+						const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/orders/pending orders/order list/pending_orders.php"; 
+						const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 						window.location.href = errorPageURL;
 					}
 				}
             },
             error: function(xhr, status, error) {
 				const encodedAlert = encodeURIComponent(data.alert);
-				const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/orders/pending orders/order list/pending_orders.php"; 
-				const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+				const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/orders/pending orders/order list/pending_orders.php"; 
+				const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 				window.location.href = errorPageURL;
 					
             }

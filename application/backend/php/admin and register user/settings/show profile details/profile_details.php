@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $UserId = $_SESSION['user_id'];
 
     ob_start();
-    include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+    include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
     $includedContent = ob_get_clean();
 
     $conn_status_data = json_decode($includedContent, true);
@@ -38,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$encodedUserId = urlencode($UserId);
 								
 				if (!empty($photo_path)){
-					$response['photo_path'] = '/FoodFrenzy/storage/photos/users/'. $encodedUserId . '/' . $encodedUserId . '.jpg';
+					$response['photo_path'] = '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/'. $encodedUserId . '/' . $encodedUserId . '.jpg';
 				} else {
-					$response['photo_path'] = '/FoodFrenzy/storage/photos/users/default user/default_user.svg';
+					$response['photo_path'] = '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/default user/default_user.svg';
 				}
             } else {
                 $response = array(

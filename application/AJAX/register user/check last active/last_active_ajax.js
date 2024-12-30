@@ -2,7 +2,7 @@ $(document).ready(function() {
     function getLastActiveTime() {
         $.ajax({
             type: 'POST',
-            url: '/FoodFrenzy/application/backend/php/register user/update user last active/update_last_active.php',
+            url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register user/update user last active/update_last_active.php',
             dataType: 'json',
             success: function(response) {
                 if (response.success) {

@@ -1,9 +1,9 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/customers/register_user_check.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/customers/register_user_check.php';
 ?>
 
 
@@ -15,18 +15,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/pages/register/cart/cart.css">
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/same/register/cart, wallet, wallet history, order history/style.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/register/cart/cart.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/register/cart, wallet, wallet history, order history/style.css">
 </head>
 <body>
 	<div class="full_screen">
 		<div class="menu"> 
 			<?php
-				include '/xampp/htdocs/FoodFrenzy/application/frontend/php/same/register/navigation/navigation_bar.php';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/common/register/navigation/navigation_bar.php';
 			?>
 		</div>
 		
-		<img src="/FoodFrenzy/storage/photos/system/food_table.jpg" alt="img" id="wallpaper"> 		
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/food_table.jpg" alt="img" id="wallpaper"> 		
 
 		<div class="middle_part">
 			<div class="cart_title"><span id="first_title">My</span> <span id="second_title">Cart</span></div>
@@ -58,7 +58,7 @@
 	</div>
 		
 	<div class="checkOutFieldAlert">
-		<img src="/FoodFrenzy/storage/svg/system/cross.svg" id="food_alert_cross">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/cross.svg" id="food_alert_cross">
 		<p id="checkOutFieldAlertTitle">Payment Type</p>
 		<p id="PayAlert" style="color: red; font-size: 18px; margin: 0px 0px 10px 0px;"></p>
 		
@@ -73,17 +73,17 @@
 		
 		
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register and unregister user/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register and unregister user/alert bar/alert.html';
 	?>
 		
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/register user/cart/cart.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/register user/cart page/handle cart/handle_cart_details_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/register user/cart page/make payment/make_payment_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/register user/cart/cart.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/register user/cart page/handle cart/handle_cart_details_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/register user/cart page/make payment/make_payment_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

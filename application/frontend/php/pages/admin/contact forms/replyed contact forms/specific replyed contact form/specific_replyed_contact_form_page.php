@@ -1,16 +1,16 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
 	if (isset($_SESSION['replyed_contact_form_details'])) {
 		$replyedContactForm = $_SESSION['replyed_contact_form_details'];
 	} else {
-	   header('Location: /FoodFrenzy/application/frontend/php/pages/admin/contact forms/replyed contact forms/replyed contact forms/replyed_contact_forms.php'); 
+	   header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/contact forms/replyed contact forms/replyed contact forms/replyed_contact_forms.php'); 
 	}
 ?>
 
@@ -18,13 +18,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/contact forms/replyed contact forms/replyed specific contact form/specific_replyed_contact_form_page.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/contact forms/replyed contact forms/replyed specific contact form/specific_replyed_contact_form_page.css">
 </head>
 <body>  
 	<div class="full_screen">
 		<?php
-			include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 		?>
 
 		<div class="cont_container"> 
@@ -86,7 +86,7 @@
 		</div>
 	</div>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/contact forms/replyed contact forms/specific replyed contact form/specific_replyed_contact_form_page.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/contact forms/replyed contact forms/specific replyed contact form/specific_replyed_contact_form_page.js"></script>
 
 </body>
 </html>

@@ -14,7 +14,7 @@ $(document).ready(function() {
 	
 		$.ajax({
 			type: "POST",
-			url: "/FoodFrenzy/application/backend/php/admin/menu/add new food/add_new_food.php",
+			url: "/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin/menu/add new food/add_new_food.php",
 			data: formData,
 			dataType: 'json',
 			contentType: false, 
@@ -50,8 +50,8 @@ $(document).ready(function() {
 
                     if (data.error_page) {
 						const encodedAlert = encodeURIComponent(data.alert);
-						const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/menu/add new food/add_new_food_page.php"; 
-						const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+						const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/add new food/add_new_food_page.php"; 
+						const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 						window.location.href = errorPageURL;
 					}
                 }
@@ -59,8 +59,8 @@ $(document).ready(function() {
             error: function (xhr, status, error) {
 				hideLoadingSpinner();
 				const encodedAlert = encodeURIComponent(data.alert);
-				const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/menu/add new food/add_new_food_page.php"; 
-				const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+				const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/add new food/add_new_food_page.php"; 
+				const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 				window.location.href = errorPageURL;
 				
 			}
@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 	function formclear(){
 		form[0].reset();
-		foodImage.src = "/FoodFrenzy/storage/svg/system/question_mark.svg";
+		foodImage.src = "/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/question_mark.svg";
 			
 		$('#foodPictureAlert').text("");
 		$('#foodNameAlert').text("");

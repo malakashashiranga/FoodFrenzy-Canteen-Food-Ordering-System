@@ -4,7 +4,7 @@
 	session_start();
 
 	if (!isset($_SESSION['step1_completed']) || $_SESSION['step1_completed'] === false) {
-		header("Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php");
+		header("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php");
 		exit;
 	} 
 ?>
@@ -14,12 +14,12 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/pages/sign part/ask email part/insert_email.css">
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/same/sign part/sign.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/sign part/ask email part/insert_email.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/sign part/sign.css">
 </head>
 <body>
 	<div class="full_screen">
-		<img src="/FoodFrenzy/storage/photos/system/old food table.jpg" alt="wallpaper" id="wallpaper">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/old food table.jpg" alt="wallpaper" id="wallpaper">
 		
 		<div class="container">
 			<form id="emailForm">
@@ -34,17 +34,17 @@
 	</div>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register and unregister user/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register and unregister user/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/remove placeholder/placeholder.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/same/sign part/fill bars error check/fill_bar_error_checker.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/sign part/ask email/email_validation_ajax.js"></script>
-	<script src="/FoodFrenzy/application/frontend/javascript/same/register and unregister user/prevent scroll bar/prevent_scroll_bar.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/common/sign part/remove placeholder/placeholder.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/common/sign part/fill bars error check/fill_bar_error_checker.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/sign part/ask email/email_validation_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/common/register and unregister user/prevent scroll bar/prevent_scroll_bar.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     function fetchFoodDetails() {
         $.ajax({
-            url: '/FoodFrenzy/application/backend/php/register and unregister user/load foods/load_foods.php',
+            url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register and unregister user/load foods/load_foods.php',
             type: "POST",
             dataType: "json",
             data: {},
@@ -66,16 +66,16 @@ $(document).ready(function () {
                 } else {
                     if (data.error_page) {
                         const encodedAlert = encodeURIComponent(data.alert);
-                        const goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/home_page.php";
-                        const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                        const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/home_page.php";
+                        const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
                         window.location.href = errorPageURL;
                     }
                 }
             },
             error: function (xhr, status, error) {
                 const encodedAlert = encodeURIComponent(error);
-                const goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/home_page.php";
-				const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/home_page.php";
+				const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 				window.location.href = errorPageURL;
             }
         });

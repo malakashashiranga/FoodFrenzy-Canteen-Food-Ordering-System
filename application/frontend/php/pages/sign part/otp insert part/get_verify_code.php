@@ -5,7 +5,7 @@
 
 	if  ((!isset($_SESSION['step1_completed']) || $_SESSION['step1_completed'] === false) || (!isset($_SESSION['step2_completed']) || $_SESSION['step2_completed'] === false)) {
 
-		header("Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php");
+		header("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php");
 		exit;
 	}
 ?>
@@ -14,13 +14,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/same/sign part/sign.css">
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/pages/sign part/otp insert part/get_verify_code.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/sign part/sign.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/sign part/otp insert part/get_verify_code.css">
 </head>
 <body>
 
 	<div class="full_screen">
-		<img src="/FoodFrenzy/storage/photos/system/old food table.jpg" alt="wallpaper" id="wallpaper">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/old food table.jpg" alt="wallpaper" id="wallpaper">
 		<div class="container">
 			<p id="title">Please enter the verification code that<br/> was sent to your e-mail <br/><span class="blue_letter" id="e_mail"><?php echo $_SESSION['e_mail']; ?></span></p>
 			<form id="otp_form">
@@ -33,16 +33,16 @@
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register and unregister user/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register and unregister user/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/sign part/otp insert part/verify.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/sign part/otp insert part/otp validation/otp_validation_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/sign part/otp insert part/resend otp/resend_code_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/sign part/otp insert part/verify.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/sign part/otp insert part/otp validation/otp_validation_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/sign part/otp insert part/resend otp/resend_code_ajax.js"></script>
 
 </body>
 </html>

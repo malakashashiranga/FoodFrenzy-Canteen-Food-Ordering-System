@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 		$foodId = urldecode($encodedFoodId);
 		
 		ob_start();
-        include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+        include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
         $includedContent = ob_get_clean();
         
         $conn_status_data = json_decode($includedContent, true);
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 							'photoPath' => $row['photo_path'],
 							'details' => ucfirst(capitalizeAfterDot($row['details']))
 						);
-						header('Location: /FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.php');
+						header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.php');
 					}
 				} else {
 					$errorMessage = "There is no food with this number.";
@@ -61,8 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
 function redirectToErrorPage($errorMessage) {
-    $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-    $goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php"; 
+    $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+    $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php"; 
 
     header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
     exit;

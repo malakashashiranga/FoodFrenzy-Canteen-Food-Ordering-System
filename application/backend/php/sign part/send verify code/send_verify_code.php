@@ -3,7 +3,7 @@ session_set_cookie_params(0, '/', '', true, true);
 session_name('active_check');
 session_start();
 
-require '/xampp/htdocs/FoodFrenzy/vendors/php/mail sender/vendor/autoload.php'; 
+require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/mail sender/vendor/autoload.php'; 
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -39,8 +39,8 @@ try {
         $mail_sender->addAddress($recipientEmail, $recipientName);
     } else {
         $errorMessage = "Process connectivity failed: " . $connection_status;
-		$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-		$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
+		$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+		$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
 
 		header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 		exit;
@@ -62,7 +62,7 @@ try {
 	
 	if ($_SESSION['sub_process'] === "main flow") {
 		$_SESSION['step2_completed'] = true;
-		header ("Location: /FoodFrenzy/application/frontend/php/pages/sign part/otp insert part/get_verify_code.php");
+		header ("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/otp insert part/get_verify_code.php");
 		exit;
 	} else {
 		$_SESSION['sub_process'] = "main flow";
@@ -80,8 +80,8 @@ try {
 	
 } catch (Exception $e) {
 	$errorMessage = "Error came from verification code sending: " . $connection_status;
-	$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-	$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
+	$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+	$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
 
 	header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 	exit;

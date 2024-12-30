@@ -149,7 +149,7 @@
 </head>
 <body>
 	<div class="header">
-		<img src="/FoodFrenzy/storage/photos/system/logo.png" id="navigation_logo" alt = "logo">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/logo.png" id="navigation_logo" alt = "logo">
 
 		<div class="nav_list">
 			<div class="nav_item" id= "menu_home">HOME</div>
@@ -160,7 +160,7 @@
 		
 		<div class="spec_bar">
 			<div class="spec_bar_symbol">
-				<div class="symbol_item"><img src="/FoodFrenzy/storage/svg/system/person.svg" id="main_ico"></div>
+				<div class="symbol_item"><img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/person.svg" id="main_ico"></div>
 				<div class="prof_bar_user_name" id="prof_bar_user_name">
 					<div class="" id="prof_bar_first_name"></div>
 					<div class="" id="prof_bar_last_name"></div>
@@ -173,32 +173,32 @@
 				</div>
 				
 				<div class="row" id="prof_bar_profile">
-					<img src="/FoodFrenzy/storage/svg/system/black_person.svg" class="prof_bar_icons">
+					<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/black_person.svg" class="prof_bar_icons">
 					<div class="prof_bar_name" id = "prof_bar_profile_text">Profile Settings</div>
 				</div>
 				
 				<div class="row" id="prof_bar_about">
-					<img src="/FoodFrenzy/storage/svg/system/persons.svg" class="prof_bar_icons">
+					<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/persons.svg" class="prof_bar_icons">
 					<div class="prof_bar_name" id = "prof_bar_about_text">About Us</div>
 				</div>
 
 				<div class="row" id="prof_bar_contact">
-					<img src="/FoodFrenzy/storage/svg/system/phone.svg" class="prof_bar_icons">
+					<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/phone.svg" class="prof_bar_icons">
 					<div class="prof_bar_name" id ="prof_bar_contact_text">Contact Us</div>
 				</div>
 				
 				<div class="row" id="prof_bar_help">
-					<img src="/FoodFrenzy/storage/svg/system/question_mark.svg" class="prof_bar_icons">
+					<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/question_mark.svg" class="prof_bar_icons">
 					<div class="prof_bar_name" id = "prof_bar_helps_text">Helps & Supports</div>
 				</div>
 					
 				<div class="row" id="prof_bar_terms">
-					<img src="/FoodFrenzy/storage/svg/system/terms & conditions.svg" class="prof_bar_icons">
+					<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/terms & conditions.svg" class="prof_bar_icons">
 					<div class="prof_bar_name" id = "prof_bar_terms_text">Terms & Conditions</div>
 				</div>
 									
 				<div class="row2" id="prof_bar_privacy">
-					<img src="/FoodFrenzy/storage/svg/system/privacy & policy.svg" class="prof_bar_icons">
+					<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/privacy & policy.svg" class="prof_bar_icons">
 					<div class="prof_bar_name" id = "prof_bar_privacy_text">Privacy & Policy</div>
 				</div>
 			</div>
@@ -227,37 +227,37 @@
 
 
 		menuHome.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/home/home_page.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/home/home_page.php";
 		});
 		menuProducts.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/foods/food_page.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/foods/food_page.php";
 		});
 		menuCart.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/cart/cart.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/cart/cart.php";
 		});
 		menuWallet.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/wallet/wallet.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/wallet/wallet.php";
 		});
 
 
 
 		profileText.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/settings/settings.php";
 		});
 		aboutUsText.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/about us/about_us.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/about us/about_us.php";
 		});
 		contactUsText.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/contact us/contacts.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/contact us/contacts.php";
 		});
 		helpSupportText.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/helps & supports/helps_&_supports.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/helps & supports/helps_&_supports.php";
 		});
 		termsConditionsText.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/terms & conditions/terms_&_conditions.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/terms & conditions/terms_&_conditions.php";
 		});
 		privacyText.addEventListener("click", function () {
-			window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/privacy policy/privacy_policy.php";
+			window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/privacy policy/privacy_policy.php";
 		});
 
 
@@ -304,7 +304,7 @@
 	$(document).ready(function() {
 		function profBarDetailsShow() {
 			$.ajax({
-				url: '/FoodFrenzy/application/backend/php/register user/navigation bar/profile_bar_names.php', 
+				url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register user/navigation bar/profile_bar_names.php', 
 				method: 'POST', 
 				dataType: 'json', 
 				success: function (data) {

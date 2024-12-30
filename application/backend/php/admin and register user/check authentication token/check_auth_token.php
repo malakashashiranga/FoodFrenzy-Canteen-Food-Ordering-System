@@ -8,7 +8,7 @@ if (isset($_COOKIE['auth_token'])) {
 	$activenessValue = 'active';
 
     ob_start(); 
-    include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+    include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
     $includedContent = ob_get_clean();
 
     $conn_status_data = json_decode($includedContent, true);
@@ -24,7 +24,7 @@ if (isset($_COOKIE['auth_token'])) {
 			$result = $stmt->get_result();
 
 			if ($result->num_rows === 0) {
-				header('Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php');
+				header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php');
 				exit;
 			} else {
 				$row = $result->fetch_assoc(); 
@@ -45,7 +45,7 @@ if (isset($_COOKIE['auth_token'])) {
 			$result = $stmt->get_result();
 
 			if ($result->num_rows > 0) {
-				header('Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php');
+				header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php');
 				exit;
 			}
 
@@ -147,7 +147,7 @@ if (isset($_COOKIE['auth_token'])) {
             $stmt->bind_result($resultTokenresultToken, $resultUserId);
             
             if ($stmt->fetch() && (!isset($_SESSION['active_session']))) {
-                header('Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php');
+                header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php');
                 exit;
             }
         } else {        
@@ -161,13 +161,13 @@ if (isset($_COOKIE['auth_token'])) {
 	$conn->close();
 
 } else {
-    header('Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php');
+    header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php');
     exit;
 }
 
 function redirectToErrorPage($errorMessage) {
-    $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-    $goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
+    $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+    $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
 
     header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
     exit;

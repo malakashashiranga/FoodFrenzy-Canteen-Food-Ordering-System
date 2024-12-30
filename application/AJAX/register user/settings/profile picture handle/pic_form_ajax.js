@@ -15,7 +15,7 @@ $(document).ready(function() {
         formData.append('action', action);
 
         $.ajax({
-            url: '/FoodFrenzy/application/backend/php/register user/settings/handle profile image/handle_image.php', 
+            url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register user/settings/handle profile image/handle_image.php', 
             method: 'POST',
             data: formData,
             processData: false,
@@ -50,8 +50,8 @@ $(document).ready(function() {
                     
 					if (data.error_page) {
 						const encodedAlert = encodeURIComponent(data.alert);
-                        goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php";  
-                        const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                        goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/settings/settings.php";  
+                        const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
                         window.location.href = errorPageURL;
                     }
                 }
@@ -59,8 +59,8 @@ $(document).ready(function() {
             error: function(xhr, status, error) {
 				hideLoadingSpinner();
                 const encodedError = encodeURIComponent(error);
-                const goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php";
-                const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedError}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/settings/settings.php";
+                const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedError}&goBackURL=${encodeURIComponent(goBackURL)}`;
                 window.location.href = errorPageURL;
             }
         });

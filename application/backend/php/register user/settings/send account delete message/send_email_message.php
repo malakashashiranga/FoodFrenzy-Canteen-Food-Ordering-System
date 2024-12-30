@@ -6,7 +6,7 @@ session_start();
 $UserId = strtoupper($_SESSION['user_id']);
 
 ob_start();
-include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 $includedContent = ob_get_clean();
     
 $conn_status_data = json_decode($includedContent, true);
@@ -24,8 +24,8 @@ if ($conn_status === "successfully") {
 
 	} else {
 		$errorMessage = "Error came from user data retrive in mail sending: " . $connection_status;
-		$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-		$goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php"; 
+		$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+		$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/settings/settings.php"; 
 
 		header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 		exit;
@@ -33,8 +33,8 @@ if ($conn_status === "successfully") {
 
 } else {
     $errorMessage = "Error came from database connection in mail sending: " . $connection_status;
-	$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-	$goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php"; 
+	$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+	$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/settings/settings.php"; 
 
 	header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 	exit;            
@@ -42,7 +42,7 @@ if ($conn_status === "successfully") {
 $conn->close();
 
 
-require '/xampp/htdocs/FoodFrenzy/vendors/php/mail sender/vendor/autoload.php';  
+require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/mail sender/vendor/autoload.php';  
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -87,8 +87,8 @@ try {
 	
 } catch (Exception $e) {
 	$errorMessage = "Error came from delete message sending: " . $connection_status;
-	$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-	$goBackURL = "/FoodFrenzy/application/frontend/php/pages/register user/settings/settings.php"; 
+	$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+	$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/settings/settings.php"; 
 
 	header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 	exit;
@@ -100,7 +100,7 @@ unset($_SESSION['settingButtonId']);
 unset($_SESSION['settingBtnProcessStep1']);
 unset($_SESSION['active_session']);
 
-header('Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php');
+header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php');
 exit;
 
 ?>

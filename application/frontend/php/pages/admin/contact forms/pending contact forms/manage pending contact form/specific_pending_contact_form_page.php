@@ -1,16 +1,16 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
 	if (isset($_SESSION['pending_contact_form_details'])) {
 		$pendingContactForm = $_SESSION['pending_contact_form_details'];
 	} else {
-	   header('Location: /FoodFrenzy/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php'); 
+	   header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php'); 
 	}
 ?>
 
@@ -18,13 +18,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/contact forms/pending contact forms/specific pending contact form/specific_pending_contact_form_page.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/contact forms/pending contact forms/specific pending contact form/specific_pending_contact_form_page.css">
 </head>
 <body>  
 	<div class="full_screen">
 		<?php
-			include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 		?>
 
 		<div class="cont_container"> 
@@ -86,15 +86,15 @@
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 	
-<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/contact forms/pending contact forms/manage specific contact form/specific_pending_contact_form_page.js"></script>
-<script src="/FoodFrenzy/application/AJAX/admin/contact forms/pending contact forms/specific contact form/reply_specific_pending_contact_form_ajax.js"></script>
+<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/contact forms/pending contact forms/manage specific contact form/specific_pending_contact_form_page.js"></script>
+<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/contact forms/pending contact forms/specific contact form/reply_specific_pending_contact_form_ajax.js"></script>
 
 </body>
 </html>

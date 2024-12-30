@@ -1,9 +1,9 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
@@ -22,13 +22,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/settings/settings.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/settings/settings.css">
 </head>
 <body>  
 	<div class="full_screen">
 		<?php
-			include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 		?>
 
 		<div class="cont_container"> 
@@ -132,17 +132,17 @@
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/settings/settings.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/settings/show admin profile details/show_admin_details_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/settings/button clicks/button_click_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/settings/log out/log_out_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/settings/settings.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/settings/show admin profile details/show_admin_details_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/settings/button clicks/button_click_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/settings/log out/log_out_ajax.js"></script>
 
 </body>
 </html>

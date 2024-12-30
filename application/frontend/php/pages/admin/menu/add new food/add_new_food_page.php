@@ -1,22 +1,22 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/menu/add new food/add_new_food_page.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
+    <link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/menu/add new food/add_new_food_page.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
 </head>
 <body>  
 	<div class="full_screen">
 		<?php
-			include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 		?>
 
 		<div class="cont_container"> 
@@ -26,7 +26,7 @@
 				<form action="" method="post" class="" id="food_form" enctype="multipart/form-data">
 				
 					<div class="image_part" id="">
-						<img id="food_image" class="container_image" src="/FoodFrenzy/storage/svg/system/question_mark.svg" alt="foodImage">
+						<img id="food_image" class="container_image" src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/question_mark.svg" alt="foodImage">
 					</div>
 			
 					<div class="fill_part" id="">
@@ -114,15 +114,15 @@
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/menu/add new food/add_new_food_page.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/menu/add new food/submit_food_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/menu/add new food/add_new_food_page.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/menu/add new food/submit_food_ajax.js"></script>
 	
 </body>
 </html>

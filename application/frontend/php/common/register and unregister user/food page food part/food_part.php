@@ -121,12 +121,12 @@
 	<div class="container" id="container">
 		<p id="product_title">PRODUCTS</p>
 		<div class="bar_container" id="bar_container">
-			<img src="/FoodFrenzy/storage/svg/system/search.svg" alt="glass" id="glass">
+			<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/search.svg" alt="glass" id="glass">
 			<input type="text" id="searchBar" placeholder="search your favourite food"  maxlength="30">
 		</div>
 
 		<div class="filter" id="filter">
-			<img src="/FoodFrenzy/storage/svg/system/filter.svg" id="filter_jpg">
+			<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/filter.svg" id="filter_jpg">
 			<select id="dropdown">
 				<option value="all">All</option>
 				<option value="main_dish">Main dishes</option>

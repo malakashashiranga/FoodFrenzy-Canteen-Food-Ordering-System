@@ -22,7 +22,7 @@ function generateAndSetAuthToken() {
 list($expirationDate, $expirationTime, $token) = generateAndSetAuthToken();
 
 ob_start();
-include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 $includedContent = ob_get_clean();
     
 $conn_status_data = json_decode($includedContent, true);
@@ -68,8 +68,8 @@ if ($conn_status === "successfully") {
 		$stmtInsert->execute();
 		if ($stmtInsert->error) {
 			$errorMessage = "Database process error: " . $stmtInsert->error;
-			$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-			$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
+			$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+			$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
 			header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 			exit;
 		} else {
@@ -83,8 +83,8 @@ if ($conn_status === "successfully") {
 		$stmtUpdate->execute();
 		if ($stmtUpdate->error) {
 			$errorMessage = "Database process error: " . $stmtUpdate->error;
-			$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-			$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
+			$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+			$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
 			header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 			exit;
 		} else {
@@ -93,8 +93,8 @@ if ($conn_status === "successfully") {
 	}
 } else {
     $errorMessage = "Database connection failed: " . $connection_status;
-    $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-    $goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
+    $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+    $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php"; 
 
     header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 	exit;
@@ -104,6 +104,6 @@ $conn->close();
 
 session_destroy();
 
-header('Location: /FoodFrenzy/application/backend/php/sign part/sign in/navigate users/user_navigation.php');
+header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/sign part/sign in/navigate users/user_navigation.php');
 
 ?>

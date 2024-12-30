@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $orderID = $_GET['orderID'];
 				
 		ob_start();
-        include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+        include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
         $includedContent = ob_get_clean();
         
         $conn_status_data = json_decode($includedContent, true);
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 						redirectToErrorPage($errorMessage);    	
 					}
 
-					header('Location: /FoodFrenzy/application/frontend/php/pages/admin/orders/discard orders/specific discard order/specific_discard_order.php');
+					header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/orders/discard orders/specific discard order/specific_discard_order.php');
 				} else {
 					$errorMessage = "No rows returned from database.";
 					redirectToErrorPage($errorMessage);
@@ -100,8 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
 function redirectToErrorPage($errorMessage) {
-    $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-    $goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/orders/discard orders/order list/discard_orders.php"; 
+    $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+    $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/orders/discard orders/order list/discard_orders.php"; 
 
     header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
     exit;

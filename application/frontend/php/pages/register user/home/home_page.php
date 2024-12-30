@@ -1,9 +1,9 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/customers/register_user_check.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/customers/register_user_check.php';
 ?>
 
 <?php
@@ -12,7 +12,7 @@
 
 <?php 
 	ob_start();
-	include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 	$includedContent = ob_get_clean();
 		
 	$conn_status_data = json_decode($includedContent, true);
@@ -56,17 +56,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	
-    <link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/pages/register/home/home_page.css">
-	<link rel="stylesheet" href="/FoodFrenzy/application/frontend/css/same/register and unregister/home/home_food.css">
+    <link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/register/home/home_page.css">
+	<link rel="stylesheet" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/register and unregister/home/home_food.css">
 </head>
 <body>
 	<div class="fullScreen">
 	
 		<div class="f_st_part"> 
 			<?php
-				include '/xampp/htdocs/FoodFrenzy/application/frontend/php/same/register/navigation/navigation_bar.php';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/common/register/navigation/navigation_bar.php';
 			?>
-			<img src="/FoodFrenzy/storage/photos/system/mushroom pizza.png" alt="img" id="wallpaper"> 
+			<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/mushroom pizza.png" alt="img" id="wallpaper"> 
 			<p class="greeting">HI !<br/><span id = "title_user_full_name"><?php echo $titleUserName; ?></span><br/>Welcome to FoodFrenzy<br/>Choose your flavor</p>
 			<div id="order_explore">Explore...></div>
 		</div>
@@ -82,29 +82,29 @@
 		
 		<div class="t_rd_part">
 			<?php
-				include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register user/site map/site_map.html';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register user/site map/site_map.html';
 			?>
 		</div>
 
 		<div class="f_th_part"> 
 			<?php
-				include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register and unregister user/copyright/copyright.html';
+				include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register and unregister user/copyright/copyright.html';
 			?>
 		</div>
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register and unregister user/specific foods/show_specific_food.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register and unregister user/specific foods/show_specific_food.html';
 	?>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/register user/add foods alert/add_foods_alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/register user/add foods alert/add_foods_alert.html';
 	?>
 	
-	<script src = "/FoodFrenzy/application/frontend/javascript/pages/register user/home/home_page.js"></script>
-	<script src = "/FoodFrenzy/application/AJAX/register user/home page/load foods/load_foods_ajax.js"></script>
-	<script src = "/FoodFrenzy/application/AJAX/register user/home page/foods add to cart/food_add_to_cart_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/register user/check last active/last_active_ajax.js"></script>
+	<script src = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/register user/home/home_page.js"></script>
+	<script src = "/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/register user/home page/load foods/load_foods_ajax.js"></script>
+	<script src = "/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/register user/home page/foods add to cart/food_add_to_cart_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/register user/check last active/last_active_ajax.js"></script>
 
 </body>
 </html>

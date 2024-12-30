@@ -1,16 +1,16 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
 	if (isset($_SESSION['food_details'])) {
 		$foodDetails = $_SESSION['food_details'];
 	} else {
-	   header('Location: /FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php'); 
+	   header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php'); 
 	}
 ?>
 
@@ -18,13 +18,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/menu/manage specific food/manage_specific_food.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/menu/manage specific food/manage_specific_food.css">
 </head>
 <body>  
 	<div class="full_screen">
 		<?php
-			include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 		?>
 
 		<div class="cont_container"> 
@@ -35,7 +35,7 @@
 					<button type="button" class="ajax-button" id="delete_button">Delete</button>
 					
 					<div class="image_part" id="">
-						<img id="food_image" name= "food_image" class="container_image" src="<?php echo isset($foodDetails['photoPath']) ? '/FoodFrenzy/storage/photos/foods/' .lcfirst($foodDetails['foodName']). '/'. $foodDetails['photoPath'] : '/FoodFrenzy/storage/photos/foods/default/question_mark.svg'; ?>" alt="foodImage">
+						<img id="food_image" name= "food_image" class="container_image" src="<?php echo isset($foodDetails['photoPath']) ? '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/' .lcfirst($foodDetails['foodName']). '/'. $foodDetails['photoPath'] : '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/default/question_mark.svg'; ?>" alt="foodImage">
 					</div>
 				
 					<div class="fill_part" id="">
@@ -127,16 +127,16 @@
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/menu/manage food details/manage specific food/update food/update_food_ajax.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/menu/manage food details/manage specific food/delete food/delete_food_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/menu/manage food details/manage specific food/update food/update_food_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/menu/manage food details/manage specific food/delete food/delete_food_ajax.js"></script>
 
 </body>
 </html>

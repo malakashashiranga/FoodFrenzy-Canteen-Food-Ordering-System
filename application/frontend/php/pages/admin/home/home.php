@@ -1,14 +1,14 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
 	ob_start();
-	include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 	$includedContent = ob_get_clean();
 		
 	$conn_status_data = json_decode($includedContent, true);
@@ -44,19 +44,19 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/home/home.css">
 </head>
 <body>  
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 	?>
 
 	<div class="cont_container"> 
-		<img src="/FoodFrenzy/storage/photos/system/logo.png" id="big_logo">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/logo.png" id="big_logo">
 		<p>WELCOME<br/><span id="f_name"><?php echo $firstName; ?>.!</span></p>
 	</div>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/home/home.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/home/home.js"></script>
 	
 </body>
 </html>

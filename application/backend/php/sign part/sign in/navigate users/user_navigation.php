@@ -1,9 +1,9 @@
 <?php
 
-include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 
 ob_start(); 
-include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 $includedContent = ob_get_clean();
 
 $conn_status_data = json_decode($includedContent, true);
@@ -23,10 +23,10 @@ if ($conn_status === "successfully") {
 			$UserType = $row['user_type'];
 			
 			if ($UserType === 'owner'){
-				header('Location: /FoodFrenzy/application/frontend/php/pages/admin/home/home.php');
+				header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/home/home.php');
 				exit;
 			} elseif ($UserType === 'customer'){
-				header('Location: /FoodFrenzy/application/frontend/php/pages/register user/home/home_page.php');
+				header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/home/home_page.php');
 				exit;
 			}
 			

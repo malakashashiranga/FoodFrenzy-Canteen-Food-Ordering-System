@@ -1,16 +1,16 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
 	if (isset($_SESSION['specific_user_details'])) {
 		$specificUserDetails = $_SESSION['specific_user_details'];
 	} else {
-	   header('Location: /FoodFrenzy/application/frontend/php/pages/admin/users/deleted requests/user list/deleted_request_users.php'); 
+	   header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/users/deleted requests/user list/deleted_request_users.php'); 
 	}
 ?>
 
@@ -18,13 +18,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/users/deleted requests/specific_deleted_request_users.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/users/deleted requests/specific_deleted_request_users.css">
 </head>
 <body>  
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 	?>
 
 	<div class="cont_container"> 
@@ -33,7 +33,7 @@
 			<form id= "specific_user_details_form" enctype="multipart/form-data">
 			
 				<div class="image_part" id="">
-					<img id="user_image" name="user_image" class="container_image" src="<?php echo isset($specificUserDetails['userPhotoPath']) ? '/FoodFrenzy/storage/photos/users/'.urlencode(strtolower($specificUserDetails['userID'])). '/' . urlencode($specificUserDetails['userPhotoPath']) : '/FoodFrenzy/storage/photos/users/default user/default_user.svg'; ?>" alt="userImage">
+					<img id="user_image" name="user_image" class="container_image" src="<?php echo isset($specificUserDetails['userPhotoPath']) ? '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/'.urlencode(strtolower($specificUserDetails['userID'])). '/' . urlencode($specificUserDetails['userPhotoPath']) : '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/default user/default_user.svg'; ?>" alt="userImage">
 				</div>
 				
 				<div class="bar_segments">
@@ -99,15 +99,15 @@
 	</div>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/users/deleted requests/specific user details/specific_deleted_request_users.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/users/deleted requests/specific user details/delete_user_details_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/users/deleted requests/specific user details/specific_deleted_request_users.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/users/deleted requests/specific user details/delete_user_details_ajax.js"></script>
 	
 </body>
 </html>

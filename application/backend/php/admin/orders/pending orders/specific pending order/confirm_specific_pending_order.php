@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/FoodFrenzy/vendors/php/mail sender/vendor/autoload.php';  
+require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/mail sender/vendor/autoload.php';  
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $orderID = $_POST['order_id'];
 
     ob_start();
-    include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+    include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
     $includedContent = ob_get_clean();
 
     $conn_status_data = json_decode($includedContent, true);

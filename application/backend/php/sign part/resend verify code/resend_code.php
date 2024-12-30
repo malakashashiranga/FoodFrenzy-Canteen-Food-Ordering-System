@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	$_SESSION['sub_process'] = "resend code";
 
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/sign part/update verify codes/update_verify_codes_table.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/sign part/update verify codes/update_verify_codes_table.php';
 } else {
     $response = array(
         'success' => false,

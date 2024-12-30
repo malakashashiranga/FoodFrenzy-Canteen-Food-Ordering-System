@@ -92,7 +92,7 @@
 <body>
 
 	<div class="specifi_food_cont">
-		<img src="/FoodFrenzy/storage/svg/system/cross.svg" id="food_alert_cross">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/cross.svg" id="food_alert_cross">
 		<div class = "spec_food_mini_cont">
 		
 		</div>
@@ -104,20 +104,20 @@
 			function addFoodToCart(foodNumber) {
 				$.ajax({
 					type: 'POST',
-					url: '/FoodFrenzy/application/backend/php/register and unregister user/food add to cart with display screen/add_to_cart.php',
+					url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register and unregister user/food add to cart with display screen/add_to_cart.php',
 					data: { foodNumber: foodNumber},
 					success: function(data) {
 						if (data.success) {
 							if (data.addCartAlert) {
 								showCartAddAlertBox(data.addCartAlert);
 							} else if (data.regCart) {
-								window.location.href = '/FoodFrenzy/application/frontend/php/pages/register user/foods/food_page.php';
+								window.location.href = '/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/foods/food_page.php';
 							}
 						} else {
 							if (data.error_page) {
 								const encodedAlert = encodeURIComponent(data.alert);
 								const goBackURL = "";
-								const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+								const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 								window.location.href = errorPageURL;
 							}
 						}
@@ -125,7 +125,7 @@
 					error: function(xhr, status, error) {
 						const encodedAlert = encodeURIComponent('AJAX Error');
 						const goBackURL = "";
-						const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+						const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 						window.location.href = errorPageURL;
 					}
 				});
@@ -137,7 +137,7 @@
 
 			function fetchFoodDetails(foodNumber) {
 				$.ajax({
-					url: '/FoodFrenzy/application/backend/php/register and unregister user/display specific food in screen/display_specific_food_details.php',
+					url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register and unregister user/display specific food in screen/display_specific_food_details.php',
 					type: "POST",
 					dataType: "json",
 					data: { foodNumber: foodNumber },
@@ -189,7 +189,7 @@
 							if (data.error_page) {
 								const encodedAlert = encodeURIComponent(data.alert);
 								const goBackURL = "";
-								const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+								const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 								window.location.href = errorPageURL;
 							}
 						}
@@ -197,7 +197,7 @@
 					error: function(xhr, status, error) {
 						const encodedAlert = encodeURIComponent(error);
 						const goBackURL = "";
-						const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+						const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 						window.location.href = errorPageURL;
 					}
 				});

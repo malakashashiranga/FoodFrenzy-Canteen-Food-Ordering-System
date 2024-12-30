@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if ($response['success'] === true) {
 		
 		ob_start();
-		include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 		$includedContent = ob_get_clean();
 
 		$conn_status_data = json_decode($includedContent, true);
@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					
 						if ($result->num_rows === 0) {
 							
-							$upload_dir = "/xampp/htdocs/FoodFrenzy/storage/photos/foods/" .$foodName. "/";
+							$upload_dir = "/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/" .$foodName. "/";
 							
 							if (!file_exists($upload_dir)) {
 								mkdir($upload_dir, 0777, true); 
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						);
 					}
 				} else {
-					$upload_dir = "/xampp/htdocs/FoodFrenzy/storage/photos/foods/" .$foodName. "/";
+					$upload_dir = "/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/" .$foodName. "/";
 							
 					if (!file_exists($upload_dir)) {
 						mkdir($upload_dir, 0777, true); 

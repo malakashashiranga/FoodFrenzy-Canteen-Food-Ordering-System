@@ -9,11 +9,11 @@ if ((!isset($_SESSION['step1_completed']) || $_SESSION['step1_completed'] === fa
     
     $_SESSION['alert'] = "Unfortunately, we are unable to complete your request.!";
     
-    header("Location: /FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php");
+    header("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php");
     exit;
 }
 
-include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 
 if ($connection_status === "successfully") {
     if ($_SESSION['process'] === 'sign up') {
@@ -82,8 +82,8 @@ if ($connection_status === "successfully") {
 						$_SESSION['alert'] = "Account created successfully. Sign in to the system.!";
 					} else {
 						$errorMessage = "Account creation unsuccessful with wallet_records creation. Please try again!";
-						$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html";
-						$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php";
+						$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html";
+						$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php";
 						header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 						exit;
 					}
@@ -91,16 +91,16 @@ if ($connection_status === "successfully") {
 				}
 			} else {
 				$errorMessage = "Account creation unsuccessful with wallet creation. Please try again!";
-				$pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-				$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php";
+				$pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+				$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php";
 				header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 				exit;
 			}
         $stmt->close();
         } else {
             $errorMessage = "Account creation unsuccessful. Please try again!";
-            $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-            $goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php";
+            $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+            $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php";
             header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
             exit;
         }
@@ -115,8 +115,8 @@ if ($connection_status === "successfully") {
             $_SESSION['alert'] = "Password changed successfully. Sign in to the system.!";
         } else {
             $errorMessage = "Password changed unsuccessful. Please try again!";
-            $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
-            $goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php";
+            $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
+            $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php";
             header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
             exit;
         }
@@ -124,19 +124,19 @@ if ($connection_status === "successfully") {
     }
 } else {
     if ($_SESSION['process'] === "sign up"){
-        $goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php"; 
+        $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php"; 
     } else {
-        $goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php";
+        $goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php";
     }
     $errorMessage = "Database connection failed: " . $connection_status;
-    $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; 
+    $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; 
     header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
     exit;
 }
 
 $conn->close();
 
-header('Location: /FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php');
+header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php');
 exit;
 
 ?>

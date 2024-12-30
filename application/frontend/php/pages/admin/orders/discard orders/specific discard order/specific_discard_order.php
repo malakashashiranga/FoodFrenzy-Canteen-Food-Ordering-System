@@ -1,16 +1,16 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
 	if (isset($_SESSION['specific_order_details'])) {
 		$discardOrderDetails = $_SESSION['specific_order_details'];
 	} else {
-	   header('Location: /FoodFrenzy/application/frontend/php/pages/admin/orders/discard orders/order list/discard_orders.php'); 
+	   header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/orders/discard orders/order list/discard_orders.php'); 
 	}
 ?>
 
@@ -18,13 +18,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/orders/discard orders/specific discard order/specific_discard_order.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/orders/discard orders/specific discard order/specific_discard_order.css">
 </head>
 <body>  
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 	?>
 
 	<div class="cont_container"> 
@@ -32,7 +32,7 @@
 		<div class="mid_container">
 			<div id= "specific_discard_order_form">
 				<div class="image_part" id="">
-					<img id="user_image" name="user_image" class="container_image" src="<?php echo isset($discardOrderDetails['userPhotoPath']) ? '/FoodFrenzy/storage/photos/users/'.urlencode(strtolower($discardOrderDetails['userID'])). '/' . urlencode($discardOrderDetails['userPhotoPath']) : '/FoodFrenzy/storage/photos/users/default user/default_user.svg'; ?>" alt="userImage">
+					<img id="user_image" name="user_image" class="container_image" src="<?php echo isset($discardOrderDetails['userPhotoPath']) ? '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/'.urlencode(strtolower($discardOrderDetails['userID'])). '/' . urlencode($discardOrderDetails['userPhotoPath']) : '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/default user/default_user.svg'; ?>" alt="userImage">
 				</div>
 				
 				<div class="bar_segments">
@@ -103,7 +103,7 @@
 		</div>
 	</div>
 
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/orders/discard orders/specific discard order/specific_discard_order.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/orders/discard orders/specific discard order/specific_discard_order.js"></script>
 
 </body>
 </html>

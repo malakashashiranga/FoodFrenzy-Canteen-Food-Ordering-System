@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$offset = intval($_POST['offset']); // Convert offset to integer
 
         ob_start();
-        include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+        include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
         $includedContent = ob_get_clean();
 
         $conn_status_data = json_decode($includedContent, true);

@@ -2,7 +2,7 @@ body {
 	font-family: 'Helvetica', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/FoodFrenzy/storage/photos/system/food_table.jpg');
+    background-image: url('/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/food_table.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -61,7 +61,7 @@ body {
 }
 
 #pic_cancel_button {
-	background-image: url('/FoodFrenzy/storage/svg/system/cross.svg');
+	background-image: url('/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/cross.svg');
 	width: 25px;
     height: 25px;
 	background-size: cover;
@@ -80,7 +80,7 @@ body {
 }
 
 #pic_confirm_button {
-	background-image: url('/FoodFrenzy/storage/svg/system/tick.svg');
+	background-image: url('/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/tick.svg');
 	background-color: #00ff0d;
 	display: none;
 	width: 25px;

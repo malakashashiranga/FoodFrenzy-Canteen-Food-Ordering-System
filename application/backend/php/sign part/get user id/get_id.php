@@ -6,7 +6,7 @@ session_start();
 $email = $_SESSION['e_mail'];
 $check_user_id = NULL;
 
-include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 
 if ($connection_status === "successfully") {
     if ($_SESSION['process'] === 'forget password') {
@@ -25,29 +25,29 @@ if ($connection_status === "successfully") {
             }
         }
 		$_SESSION['check_user_id'] = $check_user_id;
-		header("Location: /FoodFrenzy/application/backend/php/sign part/find name/find names.php");
+		header("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/sign part/find name/find names.php");
 		exit;
 		
     } elseif ($_SESSION['process'] === 'setting_email_change') {
 	
 		$_SESSION['check_user_id'] = $_SESSION['user_id'];
-		header("Location: /FoodFrenzy/application/backend/php/sign part/find name/find names.php");
+		header("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/sign part/find name/find names.php");
 		exit;
 		
     } else {
 		$check_user_id = NULL;
 		$_SESSION['check_user_id'] = $check_user_id;
-		header("Location: /FoodFrenzy/application/backend/php/sign part/update verify codes/update_verify_codes_table.php");
+		header("Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/sign part/update verify codes/update_verify_codes_table.php");
 		exit;
     }
 } else {
 	if ($_SESSION['process'] === "sign up"){
-		$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/signup first part/sign_up.php"; 
+		$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/signup first part/sign_up.php"; 
 	} else{
-		$goBackURL = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php";
+		$goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php";
 	}
 	$errorMessage = "Database connection failed: " . $connection_status;
-    $pageLink = "/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html"; // Link to your error page
+    $pageLink = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html"; // Link to your error page
 
     header("Location: $pageLink?message=" . urlencode($errorMessage) . "&goBackURL=" . urlencode($goBackURL));
 	exit;

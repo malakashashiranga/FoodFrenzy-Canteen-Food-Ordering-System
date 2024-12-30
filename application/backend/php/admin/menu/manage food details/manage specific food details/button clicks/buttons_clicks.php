@@ -1,6 +1,6 @@
 <?php
-require '/xampp/htdocs/FoodFrenzy/vendors/php/PDF_creator/vendor/autoload.php'; 
-require '/xampp/htdocs/FoodFrenzy/vendors/php/mail sender/vendor/autoload.php';  
+require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/PDF_creator/vendor/autoload.php'; 
+require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/mail sender/vendor/autoload.php';  
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$foodManageButtonId = $_SESSION['foodManageButtonId'];
 						
 			ob_start();
-			include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 			$includedContent = ob_get_clean();
     
 			$conn_status_data = json_decode($includedContent, true);
@@ -127,8 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			
 						if ($result->num_rows === 0) {
 							
-							$old_upload_dir = '/xampp/htdocs/FoodFrenzy/storage/photos/foods/' . $oldFoodName . '/';
-							$new_upload_dir = '/xampp/htdocs/FoodFrenzy/storage/photos/foods/' . $foodName . '/';
+							$old_upload_dir = '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/' . $oldFoodName . '/';
+							$new_upload_dir = '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/' . $foodName . '/';
 
 							if ($oldFoodName !== $foodName) {
 								if (is_dir($old_upload_dir)) {
@@ -658,7 +658,7 @@ function updateOrdersInform ($conn, $order_id, $updateType) {
 
 		$pdf->AddPage();
 
-		$imagePath = '/xampp/htdocs/FoodFrenzy/storage/photos/system/logo.png';
+		$imagePath = '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/system/logo.png';
 
 		$imageWidth = 200; // Define the width of the image
 		$imageHeight = 200; // Define the height of the image

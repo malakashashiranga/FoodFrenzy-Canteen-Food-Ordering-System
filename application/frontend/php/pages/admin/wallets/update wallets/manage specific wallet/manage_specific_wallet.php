@@ -1,9 +1,9 @@
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/check authentication token/check_auth_token.php';
 ?>
 
 <?php
-	include '/xampp/htdocs/FoodFrenzy/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin and register user/user type check/admin/admin_checking.php';
 ?>
 
 <?php
@@ -11,7 +11,7 @@
 		$walletDetails = $_SESSION['wallet_details'];
 	} else {
 
-	   header('Location: /FoodFrenzy/application/frontend/php/pages/admin/wallets/update wallets/wallet list/list_of_wallets.php'); 
+	   header('Location: /FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/wallets/update wallets/wallet list/list_of_wallets.php'); 
 	}
 ?>
 
@@ -19,13 +19,13 @@
 <html>
 <head>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/same/admin/content/content.css">
-	<link rel="stylesheet" type="text/css" href="/FoodFrenzy/application/frontend/css/pages/admin/wallets/update wallets/specific wallet/manage_specific_wallet.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/common/admin/content/content.css">
+	<link rel="stylesheet" type="text/css" href="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/css/pages/admin/wallets/update wallets/specific wallet/manage_specific_wallet.css">
 </head>
 <body>  
 	<div class="full_screen">
 		<?php
-			include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/side bar/side_bar.html';
+			include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/side bar/side_bar.html';
 		?>
 
 		<div class="cont_container"> 
@@ -35,7 +35,7 @@
 				<form action="" method="post" class="" id="wallet_form" enctype="multipart/form-data">
 		
 					<div class="image_part" id="">
-						<img id="user_image" name="user_image" class="container_image" src="<?php echo isset($walletDetails['photoPath']) ? '/FoodFrenzy/storage/photos/users/' . urlencode(strtolower($walletDetails['wallet_user_id'])) . '/' . urlencode($walletDetails['photoPath']) : '/FoodFrenzy/storage/photos/users/default user/default_user.svg'; ?>" alt="userPicture">
+						<img id="user_image" name="user_image" class="container_image" src="<?php echo isset($walletDetails['photoPath']) ? '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/' . urlencode(strtolower($walletDetails['wallet_user_id'])) . '/' . urlencode($walletDetails['photoPath']) : '/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/default user/default_user.svg'; ?>" alt="userPicture">
 						<p id = "user_id"><?php echo isset($walletDetails['wallet_user_id']) ? ($walletDetails['wallet_user_id']) : ''; ?></p>
 					</div>
 				
@@ -84,15 +84,15 @@
 	</div>
 
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin/alert bar/alert.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin/alert bar/alert.html';
 	?>
 	
 	<?php
-		include '/xampp/htdocs/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/loading spinner/loading_spinner.html';
+		include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/loading spinner/loading_spinner.html';
 	?>
 	
-	<script src="/FoodFrenzy/application/frontend/javascript/pages/admin/wallets/update wallets/manage specific wallet/manage_specific_wallet.js"></script>
-	<script src="/FoodFrenzy/application/AJAX/admin/wallets/update wallets/manage specific wallet/update_wallet_ajax.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/javascript/pages/admin/wallets/update wallets/manage specific wallet/manage_specific_wallet.js"></script>
+	<script src="/FoodFrenzy-Canteen-Food-Ordering-System/application/AJAX/admin/wallets/update wallets/manage specific wallet/update_wallet_ajax.js"></script>
 
 </body>
 </html>

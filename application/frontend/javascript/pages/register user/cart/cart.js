@@ -34,6 +34,6 @@ function hideCheckOutFieldAlert() {
 }
 
 orderHistoryPageLink.addEventListener("click", function () {
-	window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/order history/order_history.php";
+	window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/order history/order_history.php";
 });
 

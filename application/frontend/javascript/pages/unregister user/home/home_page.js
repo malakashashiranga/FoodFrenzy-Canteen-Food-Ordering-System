@@ -17,15 +17,15 @@ closeUp.addEventListener('click', function() {
 });
 	
 orderButtonMiddle.addEventListener("click", function () {
-	window.location.href = "/FoodFrenzy/application/frontend/php/pages/register user/foods/food_page.php";
+	window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/foods/food_page.php";
 });
 
 readMoreButton.addEventListener("click", function () {
-	window.location.href = "/FoodFrenzy/application/frontend/php/pages/unregister user/about us/about_us.php";
+	window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/unregister user/about us/about_us.php";
 });
 
 showMoreFoods.addEventListener("click", function () {
-	window.location.href = "/FoodFrenzy/application/frontend/php/pages/unregister user/food page/food_page.php";
+	window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/unregister user/food page/food_page.php";
 });
 
 	

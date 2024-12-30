@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     function loadContactFormDetails() {
         $.ajax({
-            url: '/FoodFrenzy/application/backend/php/admin/contact forms/pending contact forms/pending contact forms/load_pending_contact_forms.php',
+            url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin/contact forms/pending contact forms/pending contact forms/load_pending_contact_forms.php',
             type: "POST",
             dataType: "json",
             data: {},
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
                             formRow.on("click", function() {
                                 const formNumber = encodeURIComponent(cForm.number);
-                                window.location.href = `/FoodFrenzy/application/backend/php/admin/contact forms/pending contact forms/redirect to specific contact form/redirect_to_specific_contact_form.php?form_number=${formNumber}`;
+                                window.location.href = `/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin/contact forms/pending contact forms/redirect to specific contact form/redirect_to_specific_contact_form.php?form_number=${formNumber}`;
                             });
                             tableBody.append(formRow);
                         });
@@ -37,16 +37,16 @@ $(document).ready(function() {
                 } else {
                     if (data.error_page) {
                         const encodedAlert = encodeURIComponent(data.alert);
-                        const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php";
-                        const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                        const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php";
+                        const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
                         window.location.href = errorPageURL;
                     }
                 }
             },
             error: function(xhr, status, error) {
                 const encodedAlert = encodeURIComponent(error);
-                const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php";
-                const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/contact forms/pending contact forms/pending contact forms/pending_contact_forms_page.php";
+                const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
                 window.location.href = errorPageURL;
             }
         });

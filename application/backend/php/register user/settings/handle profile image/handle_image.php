@@ -12,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $buttonClass = $_POST['buttonClass'];
     $action = $_POST['action'];
 	
-	$upload_dir = "/xampp/htdocs/FoodFrenzy/storage/photos/users/".$UserId. "/";
+	$upload_dir = "/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/users/".$UserId. "/";
 
     if (!file_exists($upload_dir)) {
         mkdir($upload_dir, 0777, true); 
     }
 	
 	ob_start();
-	include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 	$includedContent = ob_get_clean();
     
 	$conn_status_data = json_decode($includedContent, true);

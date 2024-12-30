@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         event.preventDefault(); 
         $.ajax({
-            url: '/FoodFrenzy/application/backend/php/admin/menu/manage food details/manage specific food details/delete food/delete_food.php',
+            url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/admin/menu/manage food details/manage specific food details/delete food/delete_food.php',
             method: 'POST',
             data: { buttonId: buttonId, buttonClass: buttonClass}, 
             dataType: 'json',
@@ -16,13 +16,13 @@ $(document).ready(function() {
 					$('.alert').text('');
 					if (data.alertType === 'delete_food'){
 						hideAlertBox();
-						window.location.href = '/FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php';
+						window.location.href = '/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/manage food details/food list/manage_food_details.php';
 					} 
                 } else {
 					if (data.error_page) {
 						const encodedAlert = encodeURIComponent(data.alert);
-                        goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.php";
-                        const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+                        goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.php";
+                        const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
                         window.location.href = errorPageURL;
                     }
                 }
@@ -30,8 +30,8 @@ $(document).ready(function() {
             error: function(xhr, status, error) {
 				hideLoadingSpinner();
 				const encodedAlert = encodeURIComponent(data.alert);
-				const goBackURL = "/FoodFrenzy/application/frontend/php/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.php"; 
-				const errorPageURL = `/FoodFrenzy/application/frontend/html/same/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+				const goBackURL = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/admin/menu/manage food details/manage specific food details/manage_specific_food_details.php"; 
+				const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
 				window.location.href = errorPageURL;
             }
         });

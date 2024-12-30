@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response['success'] = true; 
 
 	ob_start();
-	include '/xampp/htdocs/FoodFrenzy/configuration/php/connect to database/con_server.php';
+	include '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/configuration/php/connect to database/con_server.php';
 	$includedContent = ob_get_clean();
     
 	$conn_status_data = json_decode($includedContent, true);
@@ -152,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 								'foodName' => capitalizeAfterSpaceOrSpecialChar($row['food_name']),
 								'nonDiscountPrice' => "Rs.".$row['non_discount_price'],
 								'discountPrice' => "Rs.".$row['discount_price'],
-								'photo_path' => "/FoodFrenzy/storage/photos/foods/". $row['food_name'] ."/".$row['photo_path'],	
+								'photo_path' => "/FoodFrenzy-Canteen-Food-Ordering-System/storage/photos/foods/". $row['food_name'] ."/".$row['photo_path'],	
 							);
 							$foodDetails[] = $foodDetail; // Append this food detail to the array
 						}

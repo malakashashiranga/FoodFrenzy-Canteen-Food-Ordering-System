@@ -4,5 +4,5 @@ document.getElementById("mobileNumber").addEventListener("input", function() {
 });
 
 function toSignIpPage() {
-    window.location.href = "/FoodFrenzy/application/frontend/php/pages/sign part/sign in/sign_in.php";
+    window.location.href = "/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/sign part/sign in/sign_in.php";
 }

@@ -42,7 +42,7 @@ if ($conn_status === "successfully") {
 $conn->close();
 
 
-require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/mail sender/vendor/autoload.php';  
+require '/xampp/htdocs/FoodFrenzy-Canteen-Food-Ordering-System/vendors/php/Mail Sends/vendor/autoload.php';  
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+		
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+        #loading-spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #spinner_image {
+            width: 45px;
+            height: 45px;
+            animation: rotate 2s linear infinite;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none; 
+        }
+		
+    </style>
+</head>
+<body>
+	<div id="loading-spinner" style="display: none;">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/spinner.svg" alt="Loading..." id="spinner_image">
+	</div>
+
+	<div id="overlay"></div>
+	
+	<script>
+		function showLoadingSpinner() {
+			document.getElementById('loading-spinner').style.display = 'block';
+			document.getElementById('overlay').style.display = 'block';
+		}
+
+		function hideLoadingSpinner() {
+			document.getElementById('loading-spinner').style.display = 'none';
+			document.getElementById('overlay').style.display = 'none';
+		}
+	</script>
+</body>
+</html>

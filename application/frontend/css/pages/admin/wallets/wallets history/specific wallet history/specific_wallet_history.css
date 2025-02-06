@@ -1,0 +1,39 @@
+#specific_discard_order_form {
+	width: 475px;
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+.image_part {
+    transform: translate(163px, 0%);
+}
+
+.doub_colon {
+	margin-right: 20px;
+}
+
+#col1 {
+	margin-left: 155px;
+}
+#col2 {
+	margin-left: 132px;
+}
+#col3 {
+	margin-left: 87px;
+}
+#col4 {
+	margin-left: 85px;
+}
+#col5 {
+	margin-left: 60px;
+}
+#col6 {
+	margin-left: 82px;
+}
+#col7 {
+	margin-left: 60px;
+}
+#col8 {
+	margin-left: 85px;
+}

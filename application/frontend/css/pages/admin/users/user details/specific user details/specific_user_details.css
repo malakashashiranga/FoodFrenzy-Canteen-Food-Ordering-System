@@ -1,0 +1,36 @@
+#specific_user_details_form {
+	width: 650px;
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+.image_part {
+    transform: translate(265px, 0%);
+}
+
+#col1 {
+	margin-left: 182px;
+}
+#col2 {
+	margin-left: 160px;
+}
+#col3 {
+	margin-left: 198px;
+}
+#col4 {
+	margin-left: 130px;
+}
+#col5 {
+	margin-left: 60px;
+}
+#col6 {
+	margin-left: 70px;
+}
+#col7 {
+	margin-left: 63px;
+}
+#col8 {
+	margin-left: 131px;
+}
+

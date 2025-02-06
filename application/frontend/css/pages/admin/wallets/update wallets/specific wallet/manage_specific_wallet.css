@@ -1,0 +1,49 @@
+#page_title {
+	text-align: center;
+}
+
+#cash_payment {
+	width: 200px;
+}
+
+#wallet_form {
+	width: 714px;
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+#user_image {
+	margin: 0;
+}
+
+#user_id {
+	margin: 10px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#col1 {
+	margin-left: 142px;
+}
+#col2 {
+	margin-left: 70px;
+}
+#col3 {
+	margin-left: 96px;
+}
+#col4 {
+	margin-left: 85px;
+}
+
+#submit_button {
+	position: absolute;
+	right: 0px;
+}
+
+.bottom_alert_para {
+	color: #002696;
+	font-size: 16px;
+	transform: translate(235px, 5px);
+	width: 500px;
+}

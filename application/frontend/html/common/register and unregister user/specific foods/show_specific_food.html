@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+		
+        .specifi_food_cont {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 30px 30px 60px 30px;
+            z-index: 1;
+            display: none;
+			border-radius: 20px;
+			width: 500px;
+        }
+
+        #spec_food_image {
+            transform: translate(190px, 0%);
+			width: 120px;
+			height: 120px;
+			border-radius: 10px; 
+			border: 1px solid #000000;
+			margin-top: 20px;
+		}
+
+        #food_alert_cross {
+            width: 35px;
+			height: 35px;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			transition: transform 0.3s ease-in-out;
+			cursor: pointer;
+        }
+		
+		#food_alert_cross:hover {
+			transform: scale(1.1);
+		}
+
+		#food_alert_cross:active {
+			transform: scale(0.9);
+		}
+
+        .disable-interaction {
+            pointer-events: none;
+        }
+		
+		.paras {
+			margin: 15px 0px 15px 0px;
+			font-size: 18px;
+		}
+		
+		#add-to-cart-spec-food {
+			background-color: #FFA724; 
+			width: 250px;
+			border-radius: 20px;
+			position: absolute;
+            bottom: 5px; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+			padding: 7px 50px;
+			font-size: 18px;
+		}
+		
+		#add-to-cart-spec-food:hover {
+			background-color: #fca21c; 
+		}
+		
+		#add-to-cart-spec-food:active {
+			background-color: #FFA724; 
+		}
+		
+		#spec_food_name {
+			margin: 0 0 20px 0;
+			font-weight: bold;
+			text-align: center;
+			font-size: 22px;
+		}
+		
+		.red_text {
+			color: #ff1900;
+		}
+		
+		.blue_text {
+			color: #1500ff;
+		}
+		
+    </style>
+</head>
+<body>
+
+	<div class="specifi_food_cont">
+		<img src="/FoodFrenzy-Canteen-Food-Ordering-System/storage/svg/system/cross.svg" id="food_alert_cross">
+		<div class = "spec_food_mini_cont">
+		
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			function addFoodToCart(foodNumber) {
+				$.ajax({
+					type: 'POST',
+					url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register and unregister user/food add to cart with display screen/add_to_cart.php',
+					data: { foodNumber: foodNumber},
+					success: function(data) {
+						if (data.success) {
+							if (data.addCartAlert) {
+								showCartAddAlertBox(data.addCartAlert);
+							} else if (data.regCart) {
+								window.location.href = '/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/php/pages/register user/foods/food_page.php';
+							}
+						} else {
+							if (data.error_page) {
+								const encodedAlert = encodeURIComponent(data.alert);
+								const goBackURL = "";
+								const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+								window.location.href = errorPageURL;
+							}
+						}
+					},
+					error: function(xhr, status, error) {
+						const encodedAlert = encodeURIComponent('AJAX Error');
+						const goBackURL = "";
+						const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+						window.location.href = errorPageURL;
+					}
+				});
+			}
+			$(document).on('click', '#add-to-cart-spec-food', function() {
+				const foodNumber = $(this).data('food-number');
+				addFoodToCart(foodNumber);
+			});
+
+			function fetchFoodDetails(foodNumber) {
+				$.ajax({
+					url: '/FoodFrenzy-Canteen-Food-Ordering-System/application/backend/php/register and unregister user/display specific food in screen/display_specific_food_details.php',
+					type: "POST",
+					dataType: "json",
+					data: { foodNumber: foodNumber },
+					success: function(data) {
+						const specifiFoodCont = $(".specifi_food_cont");
+								const specFoodMiniCont = specifiFoodCont.find(".spec_food_mini_cont");
+						if (data.success && data.foodDetails) {
+									specFoodMiniCont.empty();
+							
+							if (data.page_details == 'unreg_page') {
+								foodDetailsHTML = `
+									<img src="${data.foodDetails.photo_path}" alt="${data.foodDetails.foodName}" id="spec_food_image">
+									<p class="" id="spec_food_name">${data.foodDetails.foodName}</p>
+									<p class="paras">- Non-discount Price <span class="red_text">${data.foodDetails.nonDiscountPrice}</span></p>
+									<p class="paras">- Discount Price <span class="red_text">${data.foodDetails.discountPrice}</span> for registered users (<span class="blue_text">${data.foodDetails.discountPercentage} off</span>)</p>
+									<p class="paras">- ${data.foodDetails.details}</p>
+									<p class="paras">- Category of ${data.foodDetails.category}</p>
+									<p class="paras">- ${data.foodDetails.availability}</p>
+									<button class="add-to-cart-food" id="add-to-cart-spec-food" data-food-number="${data.foodDetails.foodNumber}">Add to Cart +</button>
+								`;
+							} else if (data.page_details == 'reg_page') {
+								foodDetailsHTML = `
+									<img src="${data.foodDetails.photo_path}" alt="${data.foodDetails.foodName}" id="spec_food_image">
+									<p class="" id="spec_food_name">${data.foodDetails.foodName}</p>
+									<p class="paras">
+										- Enjoy a <span class="blue_text">${data.foodDetails.discountPercentage}</span> Discount! 
+										Pay Only <span class="red_text">${data.foodDetails.discountPrice}</span> from 
+										<span class="red_text" style="text-decoration: line-through;">${data.foodDetails.nonDiscountPrice}</span>
+										&nbsp;&nbsp;Discount Price
+									</p>
+									<p class="paras">- ${data.foodDetails.details}</p>
+									<p class="paras">- Category of ${data.foodDetails.category}</p>
+									<p class="paras">- ${data.foodDetails.availability}</p>
+									<button class="add-to-cart-food" id="add-to-cart-spec-food" data-food-number="${data.foodDetails.foodNumber}">Add to Cart +</button>
+								`;
+							}
+							
+							specFoodMiniCont.html(foodDetailsHTML);
+							
+							specifiFoodCont.show();
+							
+							document.body.style.overflow = "hidden";
+							$('.fullScreen').addClass("disable-interaction");
+
+							const scrollY = window.scrollY + (window.innerHeight / 2);
+							const scrollX = window.scrollX + (window.innerWidth / 2);
+							specifiFoodCont.css({ top: `${scrollY}px`, left: `${scrollX}px` });
+						} else {
+							if (data.error_page) {
+								const encodedAlert = encodeURIComponent(data.alert);
+								const goBackURL = "";
+								const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+								window.location.href = errorPageURL;
+							}
+						}
+					},
+					error: function(xhr, status, error) {
+						const encodedAlert = encodeURIComponent(error);
+						const goBackURL = "";
+						const errorPageURL = `/FoodFrenzy-Canteen-Food-Ordering-System/application/frontend/html/common/admin, register and unregister user/error page/error.html?alert=${encodedAlert}&goBackURL=${encodeURIComponent(goBackURL)}`;
+						window.location.href = errorPageURL;
+					}
+				});
+			}
+
+			$(document).on("click", ".food-item img", function() {
+				const foodNumber = $(this).closest('.food-item').find('.food_number').text();
+				fetchFoodDetails(foodNumber);
+			});
+
+			$("#food_alert_cross").on("click", function() {
+				$(".specifi_food_cont").hide();
+				document.body.style.overflow = "auto"; // Enable scroll on body
+				$('.fullScreen').removeClass("disable-interaction");
+			});
+		});
+	</script>
+
+</body>
+</html>

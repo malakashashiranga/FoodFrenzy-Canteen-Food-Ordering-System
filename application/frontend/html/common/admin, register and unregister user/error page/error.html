@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .error-container {
+            width: 70%;
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .error-container h1 {
+            color: #e74c3c;
+        }
+
+        .error-container p {
+            color: #333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(16, 36, 88, 0.7);
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(16, 36, 88, 0.75);
+        }
+
+        .button:active {
+            background-color: rgba(16, 36, 88, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Oops! Something went wrong here</h1>
+        <p id="message">An error occurred.</p>
+        <a href="/" class="button">Go to Start</a>
+    </div>
+
+    <script>
+        // JavaScript code to display the error message and Go Back URL
+        document.addEventListener("DOMContentLoaded", function () {
+            const errorMessage = document.getElementById("message");
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            if (urlParams.has("alert")) {
+                const decodedMessage = decodeURIComponent(urlParams.get("alert"));
+                errorMessage.textContent = decodedMessage;
+            }
+
+            if (urlParams.has("goBackURL")) {
+                const goBackURL = decodeURIComponent(urlParams.get("goBackURL"));
+                const goBackButton = document.querySelector(".button");
+                goBackButton.setAttribute("href", goBackURL);
+            }
+        });
+    </script>
+</body>
+</html>

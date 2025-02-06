@@ -1,0 +1,14 @@
+#menu_cart {
+	border-color: #F27622;
+	color: #F27622;
+}
+
+#orderHistoryTable td {
+    padding: 25px 80px;
+}
+
+.blue_letters {
+	bottom: 30px;
+	left: 30px;
+	position: absolute;
+}

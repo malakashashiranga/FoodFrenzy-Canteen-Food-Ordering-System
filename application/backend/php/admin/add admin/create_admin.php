@@ -12,7 +12,7 @@ if ($conn_status === "successfully") {
     $hashedPassword = password_hash($password, PASSWORD_ARGON2ID);
 
     $sql = "INSERT INTO users (user_id, email, password, first_name, last_name, mobile_number, address, user_type, registered_date, registered_time, photo_path)
-    VALUES ('#jd1000', 'foodfrenzy0001@gmail.com', '$hashedPassword', 'john', 'doe', 0111111111, '123 main street,home town', 'owner', CURDATE(), CURTIME(), NULL)";
+    VALUES ('#jd1000', 'foodfrenzy@gmail.com', '$hashedPassword', 'john', 'doe', 0111111111, '123 main street,home town', 'owner', CURDATE(), CURTIME(), NULL)";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
